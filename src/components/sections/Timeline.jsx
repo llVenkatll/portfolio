@@ -52,14 +52,14 @@ const Timeline = () => {
         
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 h-full w-0.5 bg-tertiary/30 transform -translate-x-1/2" />
+          <div className="absolute left-4 md:left-1/2 h-full w-0.5 bg-accent-theme/30 transform -translate-x-1/2" />
           
           {/* Timeline events */}
           <div className="space-y-12">
             {timelineEvents.map((event, index) => (
               <div key={index} className={`flex ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 relative`}>
                 {/* Timeline dot */}
-                <div className="absolute left-4 md:left-1/2 w-8 h-8 bg-primary border-2 border-tertiary rounded-full transform -translate-x-1/2 flex items-center justify-center z-10">
+                <div className="absolute left-4 md:left-1/2 w-8 h-8 bg-primary-theme border-2 border-accent-theme rounded-full transform -translate-x-1/2 flex items-center justify-center z-10 text-accent-theme">
                   {event.icon}
                 </div>
                 
@@ -71,14 +71,14 @@ const Timeline = () => {
                   transition={{ duration: 0.5, delay: 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <div className="bg-secondary p-6 rounded-lg">
+                  <div className="bg-secondary-theme p-6 rounded-lg">
                     <div className="mb-2">
-                      <h3 className="text-lg font-bold">
+                      <h3 className="text-lg font-bold text-primary-theme">
                         {event.title} - {event.organization}
                       </h3>
-                      <span className="text-tertiary font-mono text-sm">{event.period}</span>
+                      <span className="text-accent-theme font-mono text-sm">{event.period}</span>
                     </div>
-                    <p className="text-textLight">{event.description}</p>
+                    <p className="text-secondary-theme">{event.description}</p>
                   </div>
                 </motion.div>
               </div>
