@@ -26,7 +26,7 @@ const Experience = () => {
               <div className="space-y-3 w-full">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
                   <h3 className="text-xl font-bold">Intern</h3>
-                  <span className="text-tertiary font-mono text-sm">Feb 2025 - April 2025</span>
+                  <span className="text-tertiary font-mono text-sm">Feb 2025 - Apr 2025</span>
                 </div>
                 <p className="font-medium">T U Delft University, Netherlands</p>
                 <ul className="text-textLight space-y-2 list-disc pl-5">
@@ -60,7 +60,7 @@ const Experience = () => {
               <div className="space-y-3 w-full">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
                   <h3 className="text-xl font-bold">Data Scientist</h3>
-                  <span className="text-tertiary font-mono text-sm">July 2024 - Jan 2025</span>
+                  <span className="text-tertiary font-mono text-sm">Jul 2024 - Jan 2025</span>
                 </div>
                 <p className="font-medium">Prediscan Medtech, HTIC, IIT Madras - India</p>
                 <ul className="text-textLight space-y-2 list-disc pl-5">
