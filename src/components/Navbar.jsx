@@ -43,7 +43,7 @@ const Navbar = () => {
           className="hidden md:flex items-center gap-4"
         >
           <a 
-            href="https://github.com/VenkatM300" 
+            href="https://github.com/llVenkatll" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-textLight hover:text-tertiary transition-colors duration-300"
