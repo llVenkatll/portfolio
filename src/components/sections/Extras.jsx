@@ -25,7 +25,7 @@ const Extras = () => {
       icon: <FaUsers className="text-tertiary text-3xl" />
     },
     {
-      title: "National Level Tennis Championship",
+      title: "Regional Level Tennis Championship",
       description: "Proudly represented Abu Dhabi in the National Level Tennis Championship (Under-18 category), showcasing talent and sportsmanship at a high level of athletic competition.",
       icon: <GiTennisBall className="text-tertiary text-3xl" />
     }
