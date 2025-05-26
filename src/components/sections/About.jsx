@@ -76,6 +76,22 @@ const About = () => {
                   <p className="text-textLight text-sm">Mobile app development</p>
                 </div>
               </div>
+              <div className="bg-secondary rounded-lg p-4 flex items-start space-x-3">
+                <FaLaptopCode className="text-tertiary text-3xl mt-1" />
+                <div>
+                  <h4 className="font-bold">React & Next.js</h4>
+                  <p className="text-textLight text-sm">Full-stack web development</p>
+                </div>
+              </div>
+              
+              <div className="bg-secondary rounded-lg p-4 flex items-start space-x-3">
+                <FaDatabase className="text-tertiary text-3xl mt-1" />
+                <div>
+                  <h4 className="font-bold">Node.js & MongoDB</h4>
+                  <p className="text-textLight text-sm">Backend development and databases</p>
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
