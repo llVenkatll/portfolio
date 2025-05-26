@@ -10,14 +10,14 @@ const Hero = () => {
         transition={{ duration: 0.5 }}
         className="space-y-6 max-w-4xl mx-auto"
       >
-        <h1 className="text-text font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+        <h1 className="text-primary-theme font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
           Venkatesh Meenakshinathan.
         </h1>
-        <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 text-tertiary font-medium text-lg sm:text-xl md:text-2xl">
+        <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 text-accent-theme font-medium text-lg sm:text-xl md:text-2xl">
           <span>Innovator.</span>
-          <span className="text-textLight">•</span>
+          <span className="text-secondary-theme">•</span>
           <span>Builder.</span>
-          <span className="text-textLight">•</span>
+          <span className="text-secondary-theme">•</span>
           <span>Learner.</span>
         </div>
 
