@@ -18,27 +18,27 @@ const About = () => {
           {/* Main Content - 2 columns */}
           <div className="lg:col-span-2 space-y-6">
             <div className="space-y-4">
-              <p className="text-textLight text-lg leading-relaxed">
+              <p className="text-secondary-theme text-lg leading-relaxed">
                 I am a highly motivated Biomedical Engineering student driven by a passion for using cutting-edge 
                 technology to revolutionize healthcare. My journey in this field started with a fascination for how 
                 technology can improve human lives, particularly in healthcare, leading me to pursue an 
-                <span className="text-tertiary font-semibold"> MS in Artificial Engineering at Carnegie Mellon University</span>.
+                <span className="text-accent-theme font-semibold"> MS in Artificial Engineering at Carnegie Mellon University</span>.
               </p>
               
-              <p className="text-textLight">
+              <p className="text-secondary-theme">
                 With extensive experience in machine learning, deep learning, and data analytics, I specialize in developing 
                 predictive models, medical image analysis systems, and natural language processing applications. My work spans 
-                <span className="text-tertiary font-semibold"> biomedical data analysis, medical imaging, biostatistics, medical informatics, and computational modeling</span>.
+                <span className="text-accent-theme font-semibold"> biomedical data analysis, medical imaging, biostatistics, medical informatics, and computational modeling</span>.
               </p>
               
-              <p className="text-textLight">
+              <p className="text-secondary-theme">
                 As a full stack developer, I leverage modern web technologies including React, Next.js, Node.js, 
                 MongoDB, Tailwind CSS, and ShadCN to create scalable healthcare applications. My expertise extends 
                 to cloud platforms like AWS and Firebase, enabling me to design comprehensive, end-to-end solutions 
                 that bridge the gap between cutting-edge research and practical healthcare applications.
               </p>
               
-              <p className="text-textLight">
+              <p className="text-secondary-theme">
                 Through my research and professional experience, I've developed innovative solutions that bridge 
                 theoretical knowledge with practical healthcare applications. I'm committed to harnessing technology 
                 to improve patient care, reduce costs, and create more efficient healthcare solutions that can make 
@@ -47,38 +47,38 @@ const About = () => {
             </div>
 
             {/* Research Focus Areas */}
-            <div className="bg-secondary/50 rounded-lg p-6">
-              <h3 className="text-lg font-bold mb-4 flex items-center">
-                <FaBrain className="text-tertiary mr-2" />
+            <div className="bg-secondary-theme/50 rounded-lg p-6">
+              <h3 className="text-lg font-bold mb-4 flex items-center text-primary-theme">
+                <FaBrain className="text-accent-theme mr-2" />
                 Research Focus Areas
               </h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="flex items-start space-x-3">
-                  <TbEye className="text-tertiary text-2xl mt-1" />
+                  <TbEye className="text-accent-theme text-2xl mt-1" />
                   <div>
-                    <h4 className="font-semibold text-sm">Medical Image Analysis</h4>
-                    <p className="text-textLight text-xs">Retinal analysis, fundus imaging, optic disc segmentation</p>
+                    <h4 className="font-semibold text-sm text-primary-theme">Medical Image Analysis</h4>
+                    <p className="text-secondary-theme text-xs">Retinal analysis, fundus imaging, optic disc segmentation</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <TbHeartRateMonitor className="text-tertiary text-2xl mt-1" />
+                  <TbHeartRateMonitor className="text-accent-theme text-2xl mt-1" />
                   <div>
-                    <h4 className="font-semibold text-sm">Biomedical Signal Processing</h4>
-                    <p className="text-textLight text-xs">EEG analysis, attention monitoring, prosthetic control</p>
+                    <h4 className="font-semibold text-sm text-primary-theme">Biomedical Signal Processing</h4>
+                    <p className="text-secondary-theme text-xs">EEG analysis, attention monitoring, prosthetic control</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <SiUnity className="text-tertiary text-2xl mt-1" />
+                  <SiUnity className="text-accent-theme text-2xl mt-1" />
                   <div>
-                    <h4 className="font-semibold text-sm">VR/AR Healthcare</h4>
-                    <p className="text-textLight text-xs">Home monitoring systems, diagnostic platforms</p>
+                    <h4 className="font-semibold text-sm text-primary-theme">VR/AR Healthcare</h4>
+                    <p className="text-secondary-theme text-xs">Home monitoring systems, diagnostic platforms</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <TbMicroscope className="text-tertiary text-2xl mt-1" />
+                  <TbMicroscope className="text-accent-theme text-2xl mt-1" />
                   <div>
-                    <h4 className="font-semibold text-sm">AI in Healthcare</h4>
-                    <p className="text-textLight text-xs">Predictive modeling, disease progression tracking</p>
+                    <h4 className="font-semibold text-sm text-primary-theme">AI in Healthcare</h4>
+                    <p className="text-secondary-theme text-xs">Predictive modeling, disease progression tracking</p>
                   </div>
                 </div>
               </div>
@@ -87,80 +87,80 @@ const About = () => {
           
           {/* Tech Stack Sidebar */}
           <div className="lg:col-span-1">
-            <h3 className="text-lg font-bold mb-6">My Tech Stack</h3>
+            <h3 className="text-lg font-bold mb-6 text-primary-theme">My Tech Stack</h3>
             <div className="space-y-4">
               {/* Programming Languages */}
               <div>
-                <h4 className="font-semibold text-sm text-tertiary mb-2">Programming Languages</h4>
+                <h4 className="font-semibold text-sm text-accent-theme mb-2">Programming Languages</h4>
                 <div className="grid grid-cols-2 gap-2">
-                  <div className="bg-secondary rounded-lg p-3 flex items-center space-x-2">
-                    <FaPython className="text-tertiary text-xl" />
-                    <span className="text-sm font-medium">Python</span>
+                  <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
+                    <FaPython className="text-accent-theme text-xl" />
+                    <span className="text-sm font-medium text-primary-theme">Python</span>
                   </div>
-                  <div className="bg-secondary rounded-lg p-3 flex items-center space-x-2">
-                    <FaDatabase className="text-tertiary text-xl" />
-                    <span className="text-sm font-medium">MATLAB</span>
+                  <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
+                    <FaDatabase className="text-accent-theme text-xl" />
+                    <span className="text-sm font-medium text-primary-theme">MATLAB</span>
                   </div>
-                  <div className="bg-secondary rounded-lg p-3 flex items-center space-x-2">
-                    <FaLaptopCode className="text-tertiary text-xl" />
-                    <span className="text-sm font-medium">Kotlin</span>
+                  <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
+                    <FaLaptopCode className="text-accent-theme text-xl" />
+                    <span className="text-sm font-medium text-primary-theme">Kotlin</span>
                   </div>
-                  <div className="bg-secondary rounded-lg p-3 flex items-center space-x-2">
-                    <FaDatabase className="text-tertiary text-xl" />
-                    <span className="text-sm font-medium">R</span>
+                  <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
+                    <FaDatabase className="text-accent-theme text-xl" />
+                    <span className="text-sm font-medium text-primary-theme">R</span>
                   </div>
                 </div>
               </div>
 
               {/* Full Stack Development */}
               <div>
-                <h4 className="font-semibold text-sm text-tertiary mb-2">Full Stack Development</h4>
+                <h4 className="font-semibold text-sm text-accent-theme mb-2">Full Stack Development</h4>
                 <div className="space-y-2">
-                  <div className="bg-secondary rounded-lg p-3 flex items-center space-x-2">
-                    <FaReact className="text-tertiary text-xl" />
-                    <span className="text-sm font-medium">React & Next.js</span>
+                  <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
+                    <FaReact className="text-accent-theme text-xl" />
+                    <span className="text-sm font-medium text-primary-theme">React & Next.js</span>
                   </div>
-                  <div className="bg-secondary rounded-lg p-3 flex items-center space-x-2">
-                    <FaNodeJs className="text-tertiary text-xl" />
-                    <span className="text-sm font-medium">Node.js & Express</span>
+                  <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
+                    <FaNodeJs className="text-accent-theme text-xl" />
+                    <span className="text-sm font-medium text-primary-theme">Node.js & Express</span>
                   </div>
-                  <div className="bg-secondary rounded-lg p-3 flex items-center space-x-2">
-                    <SiMongodb className="text-tertiary text-xl" />
-                    <span className="text-sm font-medium">MongoDB & SQL</span>
+                  <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
+                    <SiMongodb className="text-accent-theme text-xl" />
+                    <span className="text-sm font-medium text-primary-theme">MongoDB & SQL</span>
                   </div>
-                  <div className="bg-secondary rounded-lg p-3 flex items-center space-x-2">
-                    <SiTailwindcss className="text-tertiary text-xl" />
-                    <span className="text-sm font-medium">Tailwind & ShadCN</span>
+                  <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
+                    <SiTailwindcss className="text-accent-theme text-xl" />
+                    <span className="text-sm font-medium text-primary-theme">Tailwind & ShadCN</span>
                   </div>
                 </div>
               </div>
               
               {/* AI/ML Frameworks */}
               <div>
-                <h4 className="font-semibold text-sm text-tertiary mb-2">AI/ML Frameworks</h4>
+                <h4 className="font-semibold text-sm text-accent-theme mb-2">AI/ML Frameworks</h4>
                 <div className="space-y-2">
-                  <div className="bg-secondary rounded-lg p-3 flex items-center space-x-2">
-                    <SiTensorflow className="text-tertiary text-xl" />
-                    <span className="text-sm font-medium">TensorFlow</span>
+                  <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
+                    <SiTensorflow className="text-accent-theme text-xl" />
+                    <span className="text-sm font-medium text-primary-theme">TensorFlow</span>
                   </div>
-                  <div className="bg-secondary rounded-lg p-3 flex items-center space-x-2">
-                    <SiPytorch className="text-tertiary text-xl" />
-                    <span className="text-sm font-medium">PyTorch</span>
+                  <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
+                    <SiPytorch className="text-accent-theme text-xl" />
+                    <span className="text-sm font-medium text-primary-theme">PyTorch</span>
                   </div>
                 </div>
               </div>
               
               {/* Cloud & Tools */}
               <div>
-                <h4 className="font-semibold text-sm text-tertiary mb-2">Cloud & Development Tools</h4>
+                <h4 className="font-semibold text-sm text-accent-theme mb-2">Cloud & Development Tools</h4>
                 <div className="space-y-2">
-                  <div className="bg-secondary rounded-lg p-3 flex items-center space-x-2">
-                    <SiAmazonwebservices className="text-tertiary text-xl" />
-                    <span className="text-sm font-medium">AWS & Firebase</span>
+                  <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
+                    <SiAmazonwebservices className="text-accent-theme text-xl" />
+                    <span className="text-sm font-medium text-primary-theme">AWS & Firebase</span>
                   </div>
-                  <div className="bg-secondary rounded-lg p-3 flex items-center space-x-2">
-                    <FaLaptopCode className="text-tertiary text-xl" />
-                    <span className="text-sm font-medium">Flutter & Unity</span>
+                  <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
+                    <FaLaptopCode className="text-accent-theme text-xl" />
+                    <span className="text-sm font-medium text-primary-theme">Flutter & Unity</span>
                   </div>
                 </div>
               </div>
