@@ -14,22 +14,22 @@ const Experience = () => {
         
         <div className="space-y-8">
           <motion.div 
-            className="bg-secondary rounded-lg p-6 relative overflow-hidden border-l-4 border-tertiary"
+            className="bg-secondary-theme rounded-lg p-6 relative overflow-hidden border-l-4 border-accent-theme"
             whileHover={{ x: 5 }}
             transition={{ duration: 0.3 }}
           >
             <div className="flex flex-col md:flex-row gap-4">
-              <div className="flex items-center justify-center h-16 w-16 bg-primary/50 rounded-lg shrink-0">
-                <FaCode className="text-tertiary text-3xl" />
+              <div className="flex items-center justify-center h-16 w-16 bg-primary-theme/20 rounded-lg shrink-0">
+                <FaCode className="text-accent-theme text-3xl" />
               </div>
               
               <div className="space-y-3 w-full">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-                  <h3 className="text-xl font-bold">Intern</h3>
-                  <span className="text-tertiary font-mono text-sm">Feb 2025 - Apr 2025</span>
+                  <h3 className="text-xl font-bold text-primary-theme">Intern</h3>
+                  <span className="text-accent-theme font-mono text-sm">Feb 2025 - Apr 2025</span>
                 </div>
-                <p className="font-medium">T U Delft University, Netherlands</p>
-                <ul className="text-textLight space-y-2 list-disc pl-5">
+                <p className="font-medium text-primary-theme">T U Delft University, Netherlands</p>
+                <ul className="text-secondary-theme space-y-2 list-disc pl-5">
                   <li>
                     Research on Upper Arm Prosthetic Simulator, developing and refining a biomechanical simulator for upper limb prosthetics, focusing on movement analysis and control mechanisms.
                   </li>
@@ -48,22 +48,22 @@ const Experience = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-secondary rounded-lg p-6 relative overflow-hidden border-l-4 border-tertiary"
+            className="bg-secondary-theme rounded-lg p-6 relative overflow-hidden border-l-4 border-accent-theme"
             whileHover={{ x: 5 }}
             transition={{ duration: 0.3 }}
           >
             <div className="flex flex-col md:flex-row gap-4">
-              <div className="flex items-center justify-center h-16 w-16 bg-primary/50 rounded-lg shrink-0">
-                <FaChartLine className="text-tertiary text-3xl" />
+              <div className="flex items-center justify-center h-16 w-16 bg-primary-theme/20 rounded-lg shrink-0">
+                <FaChartLine className="text-accent-theme text-3xl" />
               </div>
               
               <div className="space-y-3 w-full">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-                  <h3 className="text-xl font-bold">Data Scientist</h3>
-                  <span className="text-tertiary font-mono text-sm">Jul 2024 - Jan 2025</span>
+                  <h3 className="text-xl font-bold text-primary-theme">Data Scientist</h3>
+                  <span className="text-accent-theme font-mono text-sm">Jul 2024 - Jan 2025</span>
                 </div>
-                <p className="font-medium">Prediscan Medtech, HTIC, IIT Madras - India</p>
-                <ul className="text-textLight space-y-2 list-disc pl-5">
+                <p className="font-medium text-primary-theme">Prediscan Medtech, HTIC, IIT Madras - India</p>
+                <ul className="text-secondary-theme space-y-2 list-disc pl-5">
                   <li>
                     Developed a comprehensive disease progression tracking system that enabled physicians to predict patient outcomes with higher accuracy, leading to faster interventions.
                   </li>
@@ -82,22 +82,22 @@ const Experience = () => {
           </motion.div>
           
           <motion.div 
-            className="bg-secondary rounded-lg p-6 relative overflow-hidden border-l-4 border-tertiary"
+            className="bg-secondary-theme rounded-lg p-6 relative overflow-hidden border-l-4 border-accent-theme"
             whileHover={{ x: 5 }}
             transition={{ duration: 0.3 }}
           >
             <div className="flex flex-col md:flex-row gap-4">
-              <div className="flex items-center justify-center h-16 w-16 bg-primary/50 rounded-lg shrink-0">
-                <FaHospital className="text-tertiary text-3xl" />
+              <div className="flex items-center justify-center h-16 w-16 bg-primary-theme/20 rounded-lg shrink-0">
+                <FaHospital className="text-accent-theme text-3xl" />
               </div>
               
               <div className="space-y-3 w-full">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-                  <h3 className="text-xl font-bold">Biomedical Engineer</h3>
-                  <span className="text-tertiary font-mono text-sm">Jan 2024</span>
+                  <h3 className="text-xl font-bold text-primary-theme">Biomedical Engineer</h3>
+                  <span className="text-accent-theme font-mono text-sm">Jan 2024</span>
                 </div>
-                <p className="font-medium">Awali Hospital, Bahrain</p>
-                <ul className="text-textLight space-y-2 list-disc pl-5">
+                <p className="font-medium text-primary-theme">Awali Hospital, Bahrain</p>
+                <ul className="text-secondary-theme space-y-2 list-disc pl-5">
                   <li>
                     Performed precise calibration and quality assurance on critical medical equipment including ECG machines, patient monitors, and diagnostic devices and reducing equipment downtime.
                   </li>
