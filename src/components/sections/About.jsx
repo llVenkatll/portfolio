@@ -164,29 +164,6 @@ const About = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Statistics */}
-              <div className="bg-primary/20 rounded-lg p-4 mt-6">
-                <h4 className="font-semibold text-sm text-tertiary mb-3">Impact & Metrics</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-textLight">Research Projects</span>
-                    <span className="text-tertiary font-semibold">7+</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-textLight">Conference Papers</span>
-                    <span className="text-tertiary font-semibold">2</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-textLight">Leadership Roles</span>
-                    <span className="text-tertiary font-semibold">5</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-textLight">Awards Won</span>
-                    <span className="text-tertiary font-semibold">4+</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
