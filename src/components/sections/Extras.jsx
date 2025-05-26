@@ -7,27 +7,27 @@ const Extras = () => {
     {
       title: "Smart India Hackathon 2023",
       description: "Selected as one of the Top 5 teams nationally in the prestigious Smart India Hackathon 2023, recognized for developing an innovative solution to address a real-world problem in the government and industry sector.",
-      icon: <FaTrophy className="text-tertiary text-3xl" />
+      icon: <FaTrophy className="text-accent-theme text-3xl" />
     },
     {
       title: "IEEE SPS Multimedia Signal Processing Cup",
       description: "Achieved 3rd place in the highly competitive National Level IEEE SPS Multimedia Signal Processing Cup, showcasing excellence in multimedia signal processing through the development of a cutting-edge project.",
-      icon: <FaMedal className="text-tertiary text-3xl" />
+      icon: <FaMedal className="text-accent-theme text-3xl" />
     },
     {
       title: "National Level Math Competition EXLOG",
       description: "Emerged as the winner of the National Level Math Competition EXLOG, demonstrating exceptional analytical and problem-solving skills in a challenging mathematical environment.",
-      icon: <FaTrophy className="text-tertiary text-3xl" />
+      icon: <FaTrophy className="text-accent-theme text-3xl" />
     },
     {
       title: "People's Choice Award on Innovation Day 2024",
       description: "Honored with the People's Choice Award on Innovation Day 2024 at SSN College of Engineering for presenting a groundbreaking innovation that captured the interest and votes of both the audience and jury members.",
-      icon: <FaUsers className="text-tertiary text-3xl" />
+      icon: <FaUsers className="text-accent-theme text-3xl" />
     },
     {
       title: "Regional Level Tennis Championship",
       description: "Proudly represented Abu Dhabi in the National Level Tennis Championship (Under-18 category), showcasing talent and sportsmanship at a high level of athletic competition.",
-      icon: <GiTennisBall className="text-tertiary text-3xl" />
+      icon: <GiTennisBall className="text-accent-theme text-3xl" />
     }
   ]
 
@@ -45,17 +45,17 @@ const Extras = () => {
           {awards.map((award, index) => (
             <motion.div 
               key={index}
-              className="bg-secondary rounded-lg p-6 flex gap-4"
+              className="bg-secondary-theme rounded-lg p-6 flex gap-4"
               whileHover={{ x: 5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="flex items-start justify-center h-12 w-12 bg-primary/50 rounded-lg shrink-0">
+              <div className="flex items-start justify-center h-12 w-12 bg-primary-theme/20 rounded-lg shrink-0">
                 {award.icon}
               </div>
               
               <div>
-                <h3 className="text-lg font-bold mb-2">{award.title}</h3>
-                <p className="text-textLight">{award.description}</p>
+                <h3 className="text-lg font-bold mb-2 text-primary-theme">{award.title}</h3>
+                <p className="text-secondary-theme">{award.description}</p>
               </div>
             </motion.div>
           ))}
