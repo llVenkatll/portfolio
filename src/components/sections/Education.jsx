@@ -26,7 +26,7 @@ const Education = () => {
               <div className="space-y-2 w-full">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <h3 className="text-xl font-bold">Master of Science in Artificial Engineering</h3>
-                  <span className="text-tertiary font-mono text-sm whitespace-nowrap sm:ml-4">Aug 2025 - Dec 2026</span>
+                  <span className="text-tertiary font-mono text-sm whitespace-nowrap sm:ml-4">Aug 2025 - Current</span>
                 </div>
                 <p className="font-medium">Carnegie Mellon University, Pittsburgh, USA</p>
                 <p className="text-textLight">
