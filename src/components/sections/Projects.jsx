@@ -6,7 +6,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Gaze Mapping Based Attention Monitoring",
-      date: "August 2024 - Present",
+      date: "Aug 2024 - Apr 2025",
       description: "Pioneered a groundbreaking gaze tracking system that maps visual attention patterns during cognitive tasks, enabling real-time monitoring of focus levels and attention span, leading to improved assessment accuracy for attention-related disorders and enhanced learning environment adaptations.",
       skills: ["Full Stack Development", "Firebase", "Machine Learning", "Human-Computer Interface"],
       icon: <TbEye className="text-tertiary text-3xl" />,
@@ -14,7 +14,7 @@ const Projects = () => {
     },
     {
       title: "Eye Fundus Image-Based Chronic Disease Prediction",
-      date: "July 2023 - Present",
+      date: "Jul 2023 - Jan 2025",
       description: "Developed an advanced retinal analysis system using fundus imagery that accurately predicts the progression of chronic diseases like diabetes and hypertension, achieving 95% sensitivity in early detection and enabling preventive interventions months before traditional diagnostic methods.",
       skills: ["Image Segmentation", "Machine Learning", "UI UX", "Medical Image Processing"],
       icon: <TbEye className="text-tertiary text-3xl" />,
@@ -22,7 +22,7 @@ const Projects = () => {
     },
     {
       title: "Multi-Modal VR-Based System for Home Glaucoma Monitoring",
-      date: "July 2024 - Oct 2024",
+      date: "Jul 2024 - Oct 2024",
       description: "Designed an at-home diagnostic platform combining interactive headset technology with non-invasive sensors that captured temperature variations, sound-based indicators, and field-of-vision data, enabling constant health tracking while achieving diagnostic accuracy comparable to specialized clinics.",
       skills: ["Data Processing", "Thermal Imaging", "Unity VR", "Embedded Systems", "Acoustics"],
       icon: <TbTemperature className="text-tertiary text-3xl" />,
@@ -30,7 +30,7 @@ const Projects = () => {
     },
     {
       title: "Tinnitus Diagnosis and Adaptive Sound Therapy",
-      date: "Sep 2023 - March 2024",
+      date: "Sep 2023 - Mar 2024",
       description: "Developed an innovative system for tinnitus diagnosis and personalized sound therapy using advanced acoustic signal processing and machine learning algorithms. The system achieved an 87% accuracy in diagnosing tinnitus severity and provided adaptive sound therapy.",
       skills: ["Flutter", "BioSignal Processing", "Data Analytics", "Pattern Recognition"],
       icon: <TbEar className="text-tertiary text-3xl" />,
@@ -38,7 +38,7 @@ const Projects = () => {
     },
     {
       title: "Thermal And Optical Camera based Life Detection System",
-      date: "Sep 2023 - March 2024",
+      date: "Sep 2023 - Mar 2024",
       description: "Architected and deployed a dual-modality biometric surveillance system leveraging thermal-optical sensor fusion and deep convolutional neural networks on Google Cloud Platform, integrating MLflow for model versioning and MongoDB for scalable medical diagnostics processing.",
       skills: ["Deep Learning", "Computer Vision", "MLflow", "MongoDB", "Medical Image Processing"],
       icon: <TbTemperature className="text-tertiary text-3xl" />,
@@ -46,7 +46,7 @@ const Projects = () => {
     },
     {
       title: "AI-Powered COVID-19 Detection in Lung CT Scans",
-      date: "Sep 2023 - March 2024",
+      date: "Sep 2023 - Mar 2024",
       description: "Created an advanced image processing and segmentation system to detect COVID-affected regions in lung CT scans using adaptive thresholding and morphological operations.",
       skills: ["MATLAB", "Image Processing", "Adaptive Histogram Equalization", "Morphological Operations"],
       icon: <TbDeviceHeartMonitor className="text-tertiary text-3xl" />,
@@ -54,7 +54,7 @@ const Projects = () => {
     },
     {
       title: "AI for Early Detection of Schizophrenia",
-      date: "2024",
+      date: "Jul 2024 - Oct 2024",
       description: "Engineered a pioneering EEG analysis pipeline that detects early neurological markers of schizophrenia, achieving 99% accuracy in identifying at-risk patients through brain wave pattern analysis, enabling crucial early interventions and personalized treatment planning.",
       skills: ["Transformers", "Attention Networks", "Machine Learning", "Feature Extraction"],
       icon: <TbBrain className="text-tertiary text-3xl" />,
