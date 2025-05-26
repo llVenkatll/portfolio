@@ -9,7 +9,7 @@ import Hero from '../components/sections/Hero'
 
 const Home = () => {
   return (
-    <div className="space-y-32 pt-20">
+    <div className="space-y-12 pt-20">
       <Hero />
       <About />
       <Education />
