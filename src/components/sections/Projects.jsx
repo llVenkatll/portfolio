@@ -10,7 +10,7 @@ const Projects = () => {
       description: "Pioneered a groundbreaking gaze tracking system that maps visual attention patterns during cognitive tasks, enabling real-time monitoring of focus levels and attention span, leading to improved assessment accuracy for attention-related disorders and enhanced learning environment adaptations.",
       skills: ["Full Stack Development", "Firebase", "Machine Learning", "Human-Computer Interface"],
       icon: <TbEye className="text-tertiary text-3xl" />,
-      github: "https://github.com/VenkatM300/gaze-tracking"
+      github: "https://github.com/llVenkatll/GazeMapping"
     },
     {
       title: "Eye Fundus Image-Based Chronic Disease Prediction",
@@ -50,7 +50,7 @@ const Projects = () => {
       description: "Created an advanced image processing and segmentation system to detect COVID-affected regions in lung CT scans using adaptive thresholding and morphological operations.",
       skills: ["MATLAB", "Image Processing", "Adaptive Histogram Equalization", "Morphological Operations"],
       icon: <TbDeviceHeartMonitor className="text-tertiary text-3xl" />,
-      github: "https://github.com/VenkatM300/covid-ct-detection"
+      github: "https://github.com/llVenkatll/AI-Powered-COVID-19-Detection-in-Lung-CT-Scans-"
     },
     {
       title: "AI for Early Detection of Schizophrenia",
@@ -58,7 +58,7 @@ const Projects = () => {
       description: "Engineered a pioneering EEG analysis pipeline that detects early neurological markers of schizophrenia, achieving 99% accuracy in identifying at-risk patients through brain wave pattern analysis, enabling crucial early interventions and personalized treatment planning.",
       skills: ["Transformers", "Attention Networks", "Machine Learning", "Feature Extraction"],
       icon: <TbBrain className="text-tertiary text-3xl" />,
-      github: "https://github.com/VenkatM300/schizophrenia-detection"
+      github: "https://github.com/llVenkatll/Classification-of-Schizophrenia-for-Early-Diagnosis"
     }
   ]
 
