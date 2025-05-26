@@ -91,7 +91,7 @@ const Navbar = () => {
               <a onClick={handleClick} href="#projects" className="nav-link">Projects</a>
             </li>
             <li className="py-2 text-xl">
-              <a onClick={handleClick} href="#timeline" className="nav-link">IEEE Journey</a>
+              <a onClick={handleClick} href="#timeline" className="nav-link">Professional Journey</a>
             </li>
             <li className="py-2 text-xl">
               <a onClick={handleClick} href="#extras" className="nav-link">Extras</a>
