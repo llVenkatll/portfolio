@@ -8,7 +8,9 @@
   }
   
   body {
-    @apply bg-primary text-text font-sans;
+    @apply transition-colors duration-300;
+    @apply dark:bg-primary dark:text-text;
+    @apply bg-primary-light text-text-light;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -30,28 +32,57 @@
 
 @layer components {
   .section-title {
-    @apply text-2xl font-bold text-text mb-6 flex items-center;
+    @apply text-2xl font-bold mb-6 flex items-center;
+    @apply dark:text-text text-text-light;
   }
   
   .section-title:before {
     content: '';
-    @apply h-px w-12 bg-tertiary mr-4;
+    @apply h-px w-12 mr-4;
+    @apply dark:bg-tertiary bg-tertiary-light;
   }
   
   .section-title:after {
     content: '';
-    @apply h-px flex-grow bg-tertiary ml-4 opacity-20;
+    @apply h-px flex-grow ml-4 opacity-20;
+    @apply dark:bg-tertiary bg-tertiary-light;
   }
   
   .nav-link {
-    @apply relative px-3 py-2 text-textLight hover:text-tertiary transition-colors duration-300;
+    @apply relative px-3 py-2 transition-colors duration-300;
+    @apply dark:text-textLight dark:hover:text-tertiary;
+    @apply text-textLight-light hover:text-tertiary-light;
   }
   
   .btn {
-    @apply px-6 py-3 border border-tertiary text-tertiary rounded hover:bg-tertiary/10 transition-all duration-300;
+    @apply px-6 py-3 rounded transition-all duration-300;
+    @apply dark:border-tertiary dark:text-tertiary dark:hover:bg-tertiary/10;
+    @apply border-tertiary-light text-tertiary-light hover:bg-tertiary-light/10 border;
   }
   
   .card {
-    @apply bg-secondary rounded-lg p-6 hover:translate-y-[-5px] transition-all duration-300;
+    @apply rounded-lg p-6 hover:translate-y-[-5px] transition-all duration-300;
+    @apply dark:bg-secondary bg-secondary-light;
+  }
+
+  /* Theme-aware classes */
+  .bg-primary-theme {
+    @apply dark:bg-primary bg-primary-light;
+  }
+
+  .bg-secondary-theme {
+    @apply dark:bg-secondary bg-secondary-light;
+  }
+
+  .text-primary-theme {
+    @apply dark:text-text text-text-light;
+  }
+
+  .text-secondary-theme {
+    @apply dark:text-textLight text-textLight-light;
+  }
+
+  .text-accent-theme {
+    @apply dark:text-tertiary text-tertiary-light;
   }
 }
