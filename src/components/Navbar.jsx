@@ -31,7 +31,7 @@ const Navbar = () => {
           <li><a href="#education" className="nav-link">Education</a></li>
           <li><a href="#experience" className="nav-link">Experience</a></li>
           <li><a href="#projects" className="nav-link">Projects</a></li>
-          <li><a href="#timeline" className="nav-link">IEEE Journey</a></li>
+          <li><a href="#timeline" className="nav-link">Professional Journey</a></li>
           <li><a href="#extras" className="nav-link">Extras</a></li>
         </motion.ul>
 
