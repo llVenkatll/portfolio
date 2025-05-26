@@ -23,10 +23,10 @@ const Education = () => {
                 <FaGraduationCap className="text-tertiary text-3xl" />
               </div>
               
-              <div className="space-y-2">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+              <div className="space-y-2 w-full">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <h3 className="text-xl font-bold">Master of Science in Artificial Engineering</h3>
-                  <span className="text-tertiary font-mono text-sm">Aug 2025 - Dec 2026</span>
+                  <span className="text-tertiary font-mono text-sm whitespace-nowrap sm:ml-4">Aug 2025 - Dec 2026</span>
                 </div>
                 <p className="font-medium">Carnegie Mellon University, Pittsburgh, USA</p>
                 <p className="text-textLight">
@@ -46,10 +46,10 @@ const Education = () => {
                 <FaGraduationCap className="text-tertiary text-3xl" />
               </div>
               
-              <div className="space-y-2">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+              <div className="space-y-2 w-full">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <h3 className="text-xl font-bold">Bachelor of Engineering in Biomedical Engineering</h3>
-                  <span className="text-tertiary font-mono text-sm">Aug 2021 - June 2025</span>
+                  <span className="text-tertiary font-mono text-sm whitespace-nowrap sm:ml-4">Aug 2021 - June 2025</span>
                 </div>
                 <p className="font-medium">Sri Sivasubramaniya Nadar College of Engineering, Chennai, India</p>
                 <div>
@@ -76,10 +76,10 @@ const Education = () => {
                 <FaSchool className="text-tertiary text-3xl" />
               </div>
               
-              <div className="space-y-2">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+              <div className="space-y-2 w-full">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <h3 className="text-xl font-bold">High School Diploma</h3>
-                  <span className="text-tertiary font-mono text-sm">Aug 2017 - June 2021</span>
+                  <span className="text-tertiary font-mono text-sm whitespace-nowrap sm:ml-4">Aug 2017 - June 2021</span>
                 </div>
                 <p className="font-medium">D.A.V. Boys School, Gopalapuram, Chennai, India</p>
               </div>
