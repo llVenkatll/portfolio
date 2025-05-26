@@ -3,26 +3,25 @@ import { FaArrowRight } from 'react-icons/fa'
 
 const Hero = () => {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center">
+    <section className="min-h-[80vh] flex flex-col justify-center items-center text-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="space-y-2"
+        className="space-y-6 max-w-4xl mx-auto"
       >
-        <h2 className="text-tertiary font-mono text-lg">Hi, my name is</h2>
-        <h1 className="text-text font-bold text-5xl sm:text-6xl md:text-7xl">
+        <h1 className="text-text font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
           Venkatesh Meenakshinathan.
         </h1>
-        <h1 className="text-textLight font-bold text-4xl sm:text-5xl md:text-6xl">
-          I build healthcare innovations.
-        </h1>
-        <p className="text-textLight max-w-lg mt-5 text-lg">
-          I'm a biomedical engineer and AI specialist focusing on revolutionizing healthcare with 
-          cutting-edge technology. Currently pursuing an MS in Artificial Engineering at CMU.
-        </p>
+        <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 text-tertiary font-medium text-lg sm:text-xl md:text-2xl">
+          <span>Innovator.</span>
+          <span className="text-textLight">•</span>
+          <span>Builder.</span>
+          <span className="text-textLight">•</span>
+          <span>Learner.</span>
+        </div>
 
-        <div className="pt-6">
+        <div className="pt-8">
           <a 
             href="#projects" 
             className="btn inline-flex items-center gap-2 group"
