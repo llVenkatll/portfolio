@@ -49,7 +49,7 @@ const Education = () => {
               <div className="space-y-2 w-full">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <h3 className="text-xl font-bold text-primary-theme">Bachelor of Engineering in Biomedical Engineering</h3>
-                  <span className="text-accent-theme font-mono text-sm whitespace-nowrap sm:ml-4">Aug 2021 - June 2025</span>
+                  <span className="text-accent-theme font-mono text-sm whitespace-nowrap sm:ml-4">Aug 2021 - Jun 2025</span>
                 </div>
                 <p className="font-medium text-primary-theme">Sri Sivasubramaniya Nadar College of Engineering, Chennai, India</p>
                 <div>
@@ -79,7 +79,7 @@ const Education = () => {
               <div className="space-y-2 w-full">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                   <h3 className="text-xl font-bold text-primary-theme">High School Diploma</h3>
-                  <span className="text-accent-theme font-mono text-sm whitespace-nowrap sm:ml-4">Aug 2017 - June 2021</span>
+                  <span className="text-accent-theme font-mono text-sm whitespace-nowrap sm:ml-4">Aug 2017 - Jun 2021</span>
                 </div>
                 <p className="font-medium text-primary-theme">D.A.V. Boys School, Gopalapuram, Chennai, India</p>
               </div>
