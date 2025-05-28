@@ -64,7 +64,7 @@ const Navbar = () => {
             <FaGithub size={24} />
           </a>
           <a 
-            href="https://www.linkedin.com/in/venkatesh-meenakshinathan-a60a88249/" 
+            href="https://www.linkedin.com/in/venkateshmeenakshinathan/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-secondary-theme hover:text-accent-theme transition-colors duration-300"
