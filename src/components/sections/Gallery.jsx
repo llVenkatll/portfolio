@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 const Gallery = () => {
   const [activeIndex, setActiveIndex] = useState(4) // Start with middle image (index 4 out of 0-9)
-  const [imageDimensions, setImageDimensions] = useState({})
+  const [hoveredIndex, setHoveredIndex] = useState(null)
   
   // Your actual images with proper names
   const images = [
@@ -59,43 +59,6 @@ const Gallery = () => {
     }
   ]
 
-  // Load image dimensions
-  useEffect(() => {
-    const loadImageDimensions = async () => {
-      const dimensions = {}
-      
-      for (let i = 0; i < images.length; i++) {
-        const img = new Image()
-        img.src = images[i].src
-        
-        await new Promise((resolve) => {
-          img.onload = () => {
-            const aspectRatio = img.naturalWidth / img.naturalHeight
-            // Normalize height to 320px and calculate width based on aspect ratio
-            const height = 320
-            const width = height * aspectRatio
-            
-            dimensions[i] = {
-              width: Math.min(width, 280), // Max width of 280px
-              height: height,
-              aspectRatio: aspectRatio
-            }
-            resolve()
-          }
-          img.onerror = () => {
-            // Fallback dimensions if image fails to load
-            dimensions[i] = { width: 240, height: 320, aspectRatio: 0.75 }
-            resolve()
-          }
-        })
-      }
-      
-      setImageDimensions(dimensions)
-    }
-    
-    loadImageDimensions()
-  }, [])
-
   // Auto-scroll effect
   useEffect(() => {
     const interval = setInterval(() => {
@@ -106,7 +69,7 @@ const Gallery = () => {
   }, [images.length])
 
   const getImageScale = (index) => {
-    if (index === activeIndex) return 1.3 // Middle/active image is larger
+    if (index === activeIndex) return 1.2 // Middle/active image is larger
     const distance = Math.abs(index - activeIndex)
     if (distance === 1) return 1.0 // Adjacent images normal size
     if (distance === 2) return 0.9 // Further images slightly smaller
@@ -119,17 +82,6 @@ const Gallery = () => {
     if (distance === 1) return 0.8
     if (distance === 2) return 0.6
     return 0.4
-  }
-
-  const getImageDimensions = (index) => {
-    const dims = imageDimensions[index]
-    if (!dims) return { width: 240, height: 320 } // Default while loading
-    
-    const scale = getImageScale(index)
-    return {
-      width: dims.width * scale,
-      height: dims.height * scale
-    }
   }
 
   return (
@@ -145,64 +97,85 @@ const Gallery = () => {
         {/* Image Gallery Container */}
         <div className="relative overflow-hidden">
           <div className="flex justify-center items-center py-8">
-            <div className="flex gap-4 overflow-x-auto scrollbar-hide items-end">
-              {images.map((image, index) => {
-                const dims = getImageDimensions(index)
-                return (
-                  <motion.div
-                    key={index}
-                    className="relative cursor-pointer flex-shrink-0"
-                    animate={{
-                      scale: getImageScale(index),
-                      opacity: getImageOpacity(index),
-                      x: `${(index - activeIndex) * 60}px`
-                    }}
-                    transition={{
-                      duration: 0.6,
-                      ease: "easeInOut"
-                    }}
-                    onClick={() => setActiveIndex(index)}
-                    whileHover={{ scale: getImageScale(index) + 0.05 }}
-                  >
-                    <div className="relative">
+            <div className="flex gap-6 overflow-x-auto scrollbar-hide">
+              {images.map((image, index) => (
+                <motion.div
+                  key={index}
+                  className="relative cursor-pointer flex-shrink-0"
+                  initial={{ scale: getImageScale(index), opacity: getImageOpacity(index) }}
+                  animate={{
+                    scale: getImageScale(index),
+                    opacity: getImageOpacity(index),
+                    x: (index - activeIndex) * 70
+                  }}
+                  transition={{
+                    duration: 0.4,
+                    ease: "easeOut"
+                  }}
+                  onClick={() => setActiveIndex(index)}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <div className="relative">
+                    {/* Fixed size container */}
+                    <div className="w-64 h-80 rounded-lg overflow-hidden shadow-lg bg-secondary-theme/20">
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="object-cover rounded-lg shadow-lg"
-                        style={{
-                          width: `${dims.width}px`,
-                          height: `${dims.height}px`,
-                          minWidth: '180px', // Minimum width to prevent too narrow images
-                          maxWidth: '350px'   // Maximum width to prevent too wide images
-                        }}
+                        className={`w-full h-full transition-all duration-300 ${
+                          hoveredIndex === index 
+                            ? 'object-contain scale-105' 
+                            : 'object-cover'
+                        }`}
                         loading="lazy"
                       />
-                      
-                      {/* Overlay with title - only show on active image */}
-                      {index === activeIndex && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg"
-                        >
-                          <h3 className="text-white font-semibold text-sm">
+                    </div>
+                    
+                    {/* Hover overlay with full image preview */}
+                    {hoveredIndex === index && (
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        className="absolute -top-4 -left-4 w-72 h-96 bg-secondary-theme rounded-lg shadow-2xl border-2 border-accent-theme/50 z-20 overflow-hidden"
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-contain"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
+                          <h3 className="text-white font-bold text-base">
                             {image.title}
                           </h3>
-                        </motion.div>
-                      )}
-                    </div>
-                  </motion.div>
-                )
-              })}
+                        </div>
+                      </motion.div>
+                    )}
+                    
+                    {/* Title overlay for active image only */}
+                    {index === activeIndex && hoveredIndex !== index && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg"
+                      >
+                        <h3 className="text-white font-semibold text-sm">
+                          {image.title}
+                        </h3>
+                      </motion.div>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
           
           {/* Navigation dots */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2 mt-8">
             {images.map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                   index === activeIndex 
                     ? 'bg-accent-theme w-8' 
                     : 'bg-secondary-theme hover:bg-accent-theme/50'
@@ -214,7 +187,7 @@ const Gallery = () => {
           
           {/* Manual navigation arrows */}
           <button
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-secondary-theme/80 hover:bg-secondary-theme text-primary-theme p-2 rounded-full transition-all duration-300"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-secondary-theme/90 hover:bg-secondary-theme text-primary-theme p-3 rounded-full transition-all duration-300 z-10 shadow-lg"
             onClick={() => setActiveIndex((prev) => (prev - 1 + images.length) % images.length)}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -223,7 +196,7 @@ const Gallery = () => {
           </button>
           
           <button
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-secondary-theme/80 hover:bg-secondary-theme text-primary-theme p-2 rounded-full transition-all duration-300"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-secondary-theme/90 hover:bg-secondary-theme text-primary-theme p-3 rounded-full transition-all duration-300 z-10 shadow-lg"
             onClick={() => setActiveIndex((prev) => (prev + 1) % images.length)}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
