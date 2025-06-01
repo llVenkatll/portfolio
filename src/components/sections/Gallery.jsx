@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 
 const Gallery = () => {
   const [activeIndex, setActiveIndex] = useState(4) // Start with middle image (index 4 out of 0-9)
+  const [hoveredIndex, setHoveredIndex] = useState(null)
   
   // Your actual images with proper names
   const images = [
@@ -62,7 +63,7 @@ const Gallery = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % images.length)
-    }, 3000) // Change image every 3 seconds
+    }, 4000) // Change image every 4 seconds
 
     return () => clearInterval(interval)
   }, [images.length])
@@ -93,20 +94,22 @@ const Gallery = () => {
       >
         <h2 className="section-title">Gallery</h2>
         
-        {/* Simple Horizontal Scrolling Gallery */}
+        {/* Image Gallery Container */}
         <div className="relative overflow-hidden">
-          <div className="flex justify-center items-center py-10">
-            <div className="flex gap-6 transition-transform duration-500 ease-out">
+          <div className="flex justify-center items-center py-8">
+            <div className="flex gap-6 overflow-x-auto scrollbar-hide">
               {images.map((image, index) => (
                 <motion.div
                   key={index}
                   className="relative cursor-pointer flex-shrink-0"
+                  initial={{ scale: getImageScale(index), opacity: getImageOpacity(index) }}
                   animate={{
                     scale: getImageScale(index),
-                    x: (index - activeIndex) * 300 // Bigger spacing for larger images
+                    opacity: getImageOpacity(index),
+                    x: (index - activeIndex) * 70
                   }}
                   transition={{
-                    duration: 0.5,
+                    duration: 0.4,
                     ease: "easeOut"
                   }}
                   onClick={() => setActiveIndex(index)}
@@ -114,44 +117,51 @@ const Gallery = () => {
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <div className="relative">
-                    {/* Bigger fixed size container - NO BLUR, NO OPACITY */}
-                    <div className="w-80 h-96 rounded-xl overflow-hidden shadow-xl bg-secondary-theme/20">
+                    {/* Fixed size container */}
+                    <div className="w-64 h-80 rounded-lg overflow-hidden shadow-lg bg-secondary-theme/20">
                       <img
                         src={image.src}
                         alt={image.alt}
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        className={`w-full h-full transition-all duration-300 ${
+                          hoveredIndex === index 
+                            ? 'object-contain scale-105' 
+                            : 'object-cover'
+                        }`}
                         loading="lazy"
                       />
                     </div>
                     
-                    {/* Hover caption popup */}
+                    {/* Hover overlay with full image preview */}
                     {hoveredIndex === index && (
                       <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 bg-secondary-theme/95 backdrop-blur-sm rounded-lg p-3 shadow-xl border border-accent-theme/30 z-20 min-w-max"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        className="absolute -top-4 -left-4 w-72 h-96 bg-secondary-theme rounded-lg shadow-2xl border-2 border-accent-theme/50 z-20 overflow-hidden"
                       >
-                        <h3 className="text-primary-theme font-bold text-sm mb-1">
-                          {image.title}
-                        </h3>
-                        <p className="text-secondary-theme text-xs">
-                          {image.alt.replace('Venkatesh - ', '')}
-                        </p>
-                        
-                        {/* Small arrow pointing up */}
-                        <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-transparent border-b-secondary-theme/95" />
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-contain"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
+                          <h3 className="text-white font-bold text-base">
+                            {image.title}
+                          </h3>
+                        </div>
                       </motion.div>
                     )}
                     
-                    {/* Active indicator */}
-                    {index === activeIndex && (
+                    {/* Title overlay for active image only */}
+                    {index === activeIndex && hoveredIndex !== index && (
                       <motion.div
-                        initial={{ opacity: 0, scale: 0 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="absolute -top-3 -right-3 w-6 h-6 bg-accent-theme rounded-full flex items-center justify-center shadow-lg"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg"
                       >
-                        <div className="w-2 h-2 bg-primary-theme rounded-full" />
+                        <h3 className="text-white font-semibold text-sm">
+                          {image.title}
+                        </h3>
                       </motion.div>
                     )}
                   </div>
