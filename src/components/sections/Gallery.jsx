@@ -117,7 +117,7 @@ const Gallery = () => {
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <div className="relative">
-                    {/* Fixed size container */}
+                    {/* Fixed size container - NO TEXT OVERLAY in normal state */}
                     <div className="w-64 h-80 rounded-lg overflow-hidden shadow-lg bg-secondary-theme/20">
                       <img
                         src={image.src}
@@ -131,37 +131,27 @@ const Gallery = () => {
                       />
                     </div>
                     
-                    {/* Hover overlay with full image preview */}
+                    {/* ONLY show enlarged preview with caption on hover */}
                     {hoveredIndex === index && (
                       <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.8 }}
-                        className="absolute -top-4 -left-4 w-72 h-96 bg-secondary-theme rounded-lg shadow-2xl border-2 border-accent-theme/50 z-20 overflow-hidden"
+                        initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        exit={{ opacity: 0, scale: 0.9, y: 10 }}
+                        className="absolute -top-6 -left-6 w-76 h-96 bg-secondary-theme rounded-xl shadow-2xl border-2 border-accent-theme/50 z-20 overflow-hidden"
                       >
                         <img
                           src={image.src}
                           alt={image.alt}
                           className="w-full h-full object-contain"
                         />
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
-                          <h3 className="text-white font-bold text-base">
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-6">
+                          <h3 className="text-white font-bold text-lg mb-1">
                             {image.title}
                           </h3>
+                          <p className="text-white/80 text-sm">
+                            {image.alt.replace('Venkatesh - ', '')}
+                          </p>
                         </div>
-                      </motion.div>
-                    )}
-                    
-                    {/* Title overlay for active image only */}
-                    {index === activeIndex && hoveredIndex !== index && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 rounded-b-lg"
-                      >
-                        <h3 className="text-white font-semibold text-sm">
-                          {image.title}
-                        </h3>
                       </motion.div>
                     )}
                   </div>
