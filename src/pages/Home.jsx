@@ -5,6 +5,7 @@ import Experience from '../components/sections/Experience'
 import Projects from '../components/sections/Projects'
 import Timeline from '../components/sections/Timeline'
 import Extras from '../components/sections/Extras'
+import Gallery from '../components/sections/Gallery'
 import Hero from '../components/sections/Hero'
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <Education />
       <Experience />
       <Projects />
+      <Gallery />
       <Timeline />
       <Extras />
     </div>
