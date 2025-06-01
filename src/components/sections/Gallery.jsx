@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 
 const Gallery = () => {
   const [activeIndex, setActiveIndex] = useState(4) // Start with middle image (index 4 out of 0-9)
-  const [hoveredIndex, setHoveredIndex] = useState(null)
   
   // Your actual images with proper names
   const images = [
@@ -63,14 +62,25 @@ const Gallery = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % images.length)
-    }, 4000) // Change image every 4 seconds
+    }, 3000) // Change image every 3 seconds
 
     return () => clearInterval(interval)
   }, [images.length])
 
   const getImageScale = (index) => {
-    if (index === activeIndex) return 1.15 // Center image slightly larger
-    return 1.0 // All other images normal size
+    if (index === activeIndex) return 1.2 // Middle/active image is larger
+    const distance = Math.abs(index - activeIndex)
+    if (distance === 1) return 1.0 // Adjacent images normal size
+    if (distance === 2) return 0.9 // Further images slightly smaller
+    return 0.8 // Furthest images smallest
+  }
+
+  const getImageOpacity = (index) => {
+    if (index === activeIndex) return 1
+    const distance = Math.abs(index - activeIndex)
+    if (distance === 1) return 0.8
+    if (distance === 2) return 0.6
+    return 0.4
   }
 
   return (
