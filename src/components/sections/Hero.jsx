@@ -77,7 +77,7 @@ const Hero = () => {
             <img
               src="/images/FormalsPic.jpg"
               alt="Venkatesh Meenakshinathan - Profile"
-              className="w-full h-full object-contain scale-90"
+              className="w-full h-full object-contain scale-95"
             />
             
             {/* Overlay gradient */}
