@@ -51,8 +51,8 @@ const Hero = () => {
               rotate: { duration: 20, repeat: Infinity, ease: "linear" },
               scale: { duration: 3, repeat: Infinity, ease: "easeInOut" }
             }}
-            className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-theme/20 to-transparent"
-            style={{ width: '350px', height: '350px' }}
+            className="absolute inset-0 rounded-[4rem] bg-gradient-to-r from-accent-theme/20 to-transparent"
+            style={{ width: '450px', height: '450px' }}
           />
           
           <motion.div
@@ -64,18 +64,18 @@ const Hero = () => {
               rotate: { duration: 15, repeat: Infinity, ease: "linear" },
               scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
             }}
-            className="absolute inset-2 rounded-full border-2 border-accent-theme/30"
+            className="absolute inset-2 rounded-[3.5rem] border-2 border-accent-theme/30"
           />
           
           {/* Profile Image Container */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-            className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-accent-theme/50 shadow-2xl"
+            className="relative w-96 h-96 rounded-[3rem] overflow-hidden border-4 border-accent-theme/50 shadow-2xl"
           >
             {/* Replace this placeholder with your actual image */}
             <img
-              src="images/FormalsPic.jpg"
+              src="/images/FormalsPic.jpg"
               alt="Venkatesh Meenakshinathan - Profile"
               className="w-full h-full object-cover"
             />
@@ -96,9 +96,9 @@ const Hero = () => {
               ease: "easeInOut",
               delay: 0.5
             }}
-            className="absolute -top-4 -right-4 w-16 h-16 bg-accent-theme/20 rounded-full flex items-center justify-center backdrop-blur-sm"
+            className="absolute -top-6 -right-6 w-20 h-20 bg-accent-theme/20 rounded-full flex items-center justify-center backdrop-blur-sm"
           >
-            <span className="text-2xl">🧠</span>
+            <span className="text-3xl">🧠</span>
           </motion.div>
           
           <motion.div
@@ -112,9 +112,9 @@ const Hero = () => {
               ease: "easeInOut",
               delay: 1
             }}
-            className="absolute -bottom-4 -left-4 w-16 h-16 bg-accent-theme/20 rounded-full flex items-center justify-center backdrop-blur-sm"
+            className="absolute -bottom-6 -left-6 w-20 h-20 bg-accent-theme/20 rounded-full flex items-center justify-center backdrop-blur-sm"
           >
-            <span className="text-2xl">⚕️</span>
+            <span className="text-3xl">⚕️</span>
           </motion.div>
           
           <motion.div
@@ -128,9 +128,9 @@ const Hero = () => {
               ease: "easeInOut",
               delay: 1.5
             }}
-            className="absolute top-1/2 -right-8 w-12 h-12 bg-accent-theme/20 rounded-full flex items-center justify-center backdrop-blur-sm"
+            className="absolute top-1/2 -right-10 w-16 h-16 bg-accent-theme/20 rounded-full flex items-center justify-center backdrop-blur-sm"
           >
-            <span className="text-xl">🔬</span>
+            <span className="text-2xl">🔬</span>
           </motion.div>
         </div>
       </motion.div>
