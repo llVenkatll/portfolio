@@ -106,7 +106,7 @@ const Gallery = () => {
                   animate={{
                     scale: getImageScale(index),
                     opacity: getImageOpacity(index),
-                    x: (index - activeIndex) * 70
+                    x: (index - activeIndex) * 120
                   }}
                   transition={{
                     duration: 0.4,
@@ -117,8 +117,8 @@ const Gallery = () => {
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
                   <div className="relative">
-                    {/* Fixed size container */}
-                    <div className="w-64 h-80 rounded-lg overflow-hidden shadow-lg bg-secondary-theme/20">
+                    {/* Fixed size container - 75% bigger */}
+                    <div className="w-[448px] h-[560px] rounded-lg overflow-hidden shadow-lg bg-secondary-theme/20">
                       <img
                         src={image.src}
                         alt={image.alt}
@@ -131,13 +131,13 @@ const Gallery = () => {
                       />
                     </div>
                     
-                    {/* Hover overlay with full image preview */}
+                    {/* Hover overlay with full image preview - 75% bigger */}
                     {hoveredIndex === index && (
                       <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
-                        className="absolute -top-4 -left-4 w-72 h-96 bg-secondary-theme rounded-lg shadow-2xl border-2 border-accent-theme/50 z-20 overflow-hidden"
+                        className="absolute -top-4 -left-4 w-[504px] h-[672px] bg-secondary-theme rounded-lg shadow-2xl border-2 border-accent-theme/50 z-20 overflow-hidden"
                       >
                         <img
                           src={image.src}
