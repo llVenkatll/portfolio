@@ -68,9 +68,30 @@ const Gallery = () => {
     return () => clearInterval(interval)
   }, [images.length])
 
+  // Calculate shortest distance in circular array (cylinder behavior)
+  const getCircularDistance = (index) => {
+    const directDistance = Math.abs(index - activeIndex)
+    const wrapDistance = images.length - directDistance
+    return Math.min(directDistance, wrapDistance)
+  }
+
+  // Calculate position offset for cylinder scrolling
+  const getCircularOffset = (index) => {
+    const directOffset = index - activeIndex
+    const wrapOffset = directOffset > 0 
+      ? directOffset - images.length 
+      : directOffset + images.length
+    
+    // Choose the shorter path
+    if (Math.abs(directOffset) <= Math.abs(wrapOffset)) {
+      return directOffset
+    }
+    return wrapOffset
+  }
+
   const getImageScale = (index) => {
     if (index === activeIndex) return 1.2 // Middle/active image is larger
-    const distance = Math.abs(index - activeIndex)
+    const distance = getCircularDistance(index)
     if (distance === 1) return 1.0 // Adjacent images normal size
     if (distance === 2) return 0.9 // Further images slightly smaller
     return 0.8 // Furthest images smallest
@@ -78,7 +99,7 @@ const Gallery = () => {
 
   const getImageOpacity = (index) => {
     if (index === activeIndex) return 1
-    const distance = Math.abs(index - activeIndex)
+    const distance = getCircularDistance(index)
     if (distance === 1) return 0.8
     if (distance === 2) return 0.6
     return 0.4
@@ -106,7 +127,7 @@ const Gallery = () => {
                   animate={{
                     scale: getImageScale(index),
                     opacity: getImageOpacity(index),
-                    x: (index - activeIndex) * 120
+                    x: getCircularOffset(index) * 120
                   }}
                   transition={{
                     duration: 0.4,
