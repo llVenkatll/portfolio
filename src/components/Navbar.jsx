@@ -34,6 +34,7 @@ const Navbar = () => {
           <li><a href="#education" className="nav-link">Education</a></li>
           <li><a href="#experience" className="nav-link">Experience</a></li>
           <li><a href="#projects" className="nav-link">Projects</a></li>
+          <li><a href="#gallery" className="nav-link">Gallery</a></li>
           <li><a href="#timeline" className="nav-link">Professional Journey</a></li>
           <li><a href="#extras" className="nav-link">Extras</a></li>
         </motion.ul>
@@ -111,6 +112,9 @@ const Navbar = () => {
             </li>
             <li className="py-2 text-xl">
               <a onClick={handleClick} href="#projects" className="nav-link">Projects</a>
+            </li>
+            <li className="py-2 text-xl">
+              <a onClick={handleClick} href="#gallery" className="nav-link">Gallery</a>
             </li>
             <li className="py-2 text-xl">
               <a onClick={handleClick} href="#timeline" className="nav-link">Professional Journey</a>
