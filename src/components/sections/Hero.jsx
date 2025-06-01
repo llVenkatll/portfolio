@@ -75,7 +75,7 @@ const Hero = () => {
           >
             {/* Replace this placeholder with your actual image */}
             <img
-              src="/api/placeholder/320/320"
+              src="public/images/FormalsPic.jpg"
               alt="Venkatesh Meenakshinathan - Profile"
               className="w-full h-full object-cover"
             />
