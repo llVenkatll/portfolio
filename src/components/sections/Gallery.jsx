@@ -68,16 +68,18 @@ const Gallery = () => {
     }
   ]
 
-  // Auto-scroll effect
+  // Auto-scroll effect - 7 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % images.length)
-    }, 5000) // Change image every 5 seconds
+    }, 7000) // Change image every 7 seconds
 
     return () => clearInterval(interval)
   }, [images.length])
 
   const currentImage = images[activeIndex]
+  const prevImage = images[(activeIndex - 1 + images.length) % images.length]
+  const nextImage = images[(activeIndex + 1) % images.length]
 
   return (
     <section id="gallery" className="pt-10">
@@ -89,89 +91,158 @@ const Gallery = () => {
       >
         <h2 className="section-title">Gallery</h2>
         
-        {/* Single Image Display */}
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+        {/* Gallery Display */}
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             
-            {/* Image Container */}
-            <motion.div
-              key={activeIndex}
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="relative"
-            >
-              <div className="w-full h-[500px] rounded-lg overflow-hidden shadow-xl bg-secondary-theme/10">
-                <img
-                  src={currentImage.src}
-                  alt={currentImage.alt}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+            {/* Images Container */}
+            <div className="relative">
+              <div className="flex items-center justify-center relative h-[500px] overflow-hidden">
+                
+                {/* Previous Image (Left, Blurred) */}
+                <motion.div
+                  key={`prev-${activeIndex}`}
+                  initial={{ opacity: 0, x: -100, scale: 0.8 }}
+                  animate={{ opacity: 0.4, x: -80, scale: 0.7 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  className="absolute left-0 w-[200px] h-[300px] rounded-lg overflow-hidden shadow-lg z-10 cursor-pointer"
+                  onClick={() => setActiveIndex((prev) => (prev - 1 + images.length) % images.length)}
+                >
+                  <img
+                    src={prevImage.src}
+                    alt={prevImage.alt}
+                    className="w-full h-full object-cover filter blur-sm"
+                    loading="lazy"
+                  />
+                </motion.div>
+
+                {/* Current Image (Center, Sharp) */}
+                <motion.div
+                  key={`current-${activeIndex}`}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  className="relative z-20 w-[350px] h-[450px] rounded-lg overflow-hidden shadow-2xl"
+                >
+                  <img
+                    src={currentImage.src}
+                    alt={currentImage.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </motion.div>
+
+                {/* Next Image (Right, Blurred) */}
+                <motion.div
+                  key={`next-${activeIndex}`}
+                  initial={{ opacity: 0, x: 100, scale: 0.8 }}
+                  animate={{ opacity: 0.4, x: 80, scale: 0.7 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                  className="absolute right-0 w-[200px] h-[300px] rounded-lg overflow-hidden shadow-lg z-10 cursor-pointer"
+                  onClick={() => setActiveIndex((prev) => (prev + 1) % images.length)}
+                >
+                  <img
+                    src={nextImage.src}
+                    alt={nextImage.alt}
+                    className="w-full h-full object-cover filter blur-sm"
+                    loading="lazy"
+                  />
+                </motion.div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Text Content */}
             <motion.div
               key={`text-${activeIndex}`}
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
               className="space-y-6"
             >
               <div>
-                <h3 className="text-3xl font-bold text-primary-theme mb-4">
+                <motion.h3 
+                  className="text-4xl font-bold text-primary-theme mb-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
                   {currentImage.title}
-                </h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                </motion.h3>
+                <motion.p 
+                  className="text-lg text-gray-600 leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                >
                   {currentImage.description}
-                </p>
+                </motion.p>
               </div>
 
               {/* Image Counter */}
-              <div className="text-sm text-gray-500">
+              <motion.div 
+                className="text-sm text-gray-500 font-medium"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+              >
                 {activeIndex + 1} of {images.length}
+              </motion.div>
+
+              {/* Progress Bar */}
+              <div className="w-full bg-gray-200 rounded-full h-1">
+                <motion.div
+                  className="bg-accent-theme h-1 rounded-full"
+                  initial={{ width: "0%" }}
+                  animate={{ width: `${((activeIndex + 1) / images.length) * 100}%` }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                />
               </div>
             </motion.div>
           </div>
           
           {/* Navigation Controls */}
-          <div className="flex justify-center items-center gap-6 mt-12">
+          <div className="flex justify-center items-center gap-8 mt-16">
             
             {/* Previous Button */}
-            <button
-              className="bg-secondary-theme/90 hover:bg-secondary-theme text-primary-theme p-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+            <motion.button
+              className="bg-secondary-theme/90 hover:bg-secondary-theme text-primary-theme p-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               onClick={() => setActiveIndex((prev) => (prev - 1 + images.length) % images.length)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-            </button>
+            </motion.button>
 
             {/* Navigation Dots */}
             <div className="flex gap-3">
               {images.map((_, index) => (
-                <button
+                <motion.button
                   key={index}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`h-3 rounded-full transition-all duration-500 ${
                     index === activeIndex 
                       ? 'bg-accent-theme w-8' 
-                      : 'bg-secondary-theme hover:bg-accent-theme/50'
+                      : 'bg-secondary-theme hover:bg-accent-theme/50 w-3'
                   }`}
                   onClick={() => setActiveIndex(index)}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
                 />
               ))}
             </div>
 
             {/* Next Button */}
-            <button
-              className="bg-secondary-theme/90 hover:bg-secondary-theme text-primary-theme p-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+            <motion.button
+              className="bg-secondary-theme/90 hover:bg-secondary-theme text-primary-theme p-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               onClick={() => setActiveIndex((prev) => (prev + 1) % images.length)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </button>
+            </motion.button>
           </div>
         </div>
       </motion.div>
