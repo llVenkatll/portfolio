@@ -9,62 +9,62 @@ const Gallery = () => {
     {
       src: "/images/1 (1).jpg",
       alt: "Venkatesh - Professional Event 1",
-      title: "Diversity Hiring",
-      description: "Proof that engineers can dress up and still look like a startup pitch."
+      title: "Conference Presentation",
+      description: "Presenting research findings at a professional conference, showcasing innovative solutions in biomedical engineering."
     },
     {
       src: "/images/1 (2).jpg",
       alt: "Venkatesh - Lab Work 1",
-      title: "Delft Diaries: The Dream Team",
-      description: "Moments from a global experience that reshaped perspectives."
+      title: "Research Laboratory",
+      description: "Working on advanced biomedical equipment and conducting research in the laboratory environment."
     },
     {
       src: "/images/1 (3).jpg",
       alt: "Venkatesh - Team Photo 1",
-      title: "Paris Nights, Eiffel Heights",
-      description: "Lit by the tower, driven by dreams – a night in the city of lights."
+      title: "Team Collaboration",
+      description: "Collaborating with team members on innovative projects and research initiatives."
     },
     {
       src: "/images/1 (4).jpg",
       alt: "Venkatesh - Award Ceremony 1",
-      title: "eXlog – Math in Motion",
-      description: "The Math Club squad that made "eXlog" a fun equation of logic and laughter.."
+      title: "Award Recognition",
+      description: "Receiving recognition for outstanding contributions to research and academic excellence."
     },
     {
-      src: "/images/5th.jpg",
+      src: "/images/1 (5).jpg",
       alt: "Venkatesh - Tennis Tournament",
-      title: "Global Connect: From Peru to SSN",
-      description: "Welcoming our exchange student from Peru for an ICASSP 2025 internship.Cultures, ideas, and smiles exchanged—english wasn’t the only common language!"
+      title: "Tennis Championship",
+      description: "Competing in tennis tournaments and maintaining an active sports lifestyle alongside academics."
     },
     {
       src: "/images/1 (6).jpg",
       alt: "Venkatesh - Graduation",
-      title: "Runners-Up at MSP Cup – EEG Edition",
-      description: "Clinched 2nd place at the Multimedia Signal Processing Cup in Ahmedabad! Decoded EEG with AM-LSTM and 1D-CNN – signal processing done right!"
+      title: "Academic Achievement",
+      description: "Celebrating graduation and academic milestones with family and friends."
     },
     {
-      src: "/images/7th.jpg",
+      src: "/images/1 (7).jpg",
       alt: "Venkatesh - Hackathon",
-      title: "Outing at Science City",
-      description: "Smiles, steps, and science – team outings don’t get better than this. Candid laughter outside Chennai’s iconic dome of curiosity! ."
+      title: "Smart India Hackathon",
+      description: "Participating in the Smart India Hackathon, developing innovative solutions for national challenges."
     },
     {
-      src: "/images/8th.jpg",
+      src: "/images/1 (8).jpg",
       alt: "Venkatesh - Professional Event 2",
-      title: "Suits, Smiles & Soulmates",
-      description: "Not just friends—family in formals, hearts in sync."
+      title: "IEEE Leadership",
+      description: "Taking leadership roles in IEEE student chapter and organizing technical events."
     },
     {
       src: "/images/1 (9).jpg",
       alt: "Venkatesh - Lab Work 2",
-      title: "Dinner & Dialogues at Novotel",
-      description: "Wrapped up the SPS talk by Dr. Ken Sugeyama with good food and great minds.From high-impact journals to high-impact buffet—what a night!"
+      title: "Medical Equipment",
+      description: "Working with advanced medical equipment and biomedical instruments in research projects."
     },
     {
       src: "/images/1 (10).jpg",
       alt: "Venkatesh - Team Photo 2",
-      title: "Biomedical Engineers at WHIF 2023",
-      description: "Holistic thinkers at the World Health Innovation Forum. Learning, networking, and repping SSN like pros on a mission."
+      title: "Innovation Day 2024",
+      description: "Participating in Innovation Day 2024, showcasing cutting-edge projects and research work."
     }
   ]
 
