@@ -84,7 +84,7 @@ const Gallery = () => {
         
         {/* Gallery Display */}
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-3 gap-8 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             
             {/* Images Container - Left Side */}
             <div className="relative">
@@ -125,7 +125,7 @@ const Gallery = () => {
               </div>
             </div>
 
-            {/* Text Content - Center */}
+            {/* Text Content - Right Side */}
             <motion.div
               key={`text-${activeIndex}`}
               initial={{ opacity: 0, x: 50 }}
@@ -167,31 +167,11 @@ const Gallery = () => {
                 <motion.div
                   className="bg-accent-theme h-1 rounded-full"
                   initial={{ width: "0%" }}
-                  animate={{ width: `${((activeIndex + 1) / images.length) * 100}%` }}
+                  animate={{ opacity: 1, width: `${((activeIndex + 1) / images.length) * 100}%` }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
                 />
               </div>
             </motion.div>
-
-            {/* Next Image - Right Side */}
-            <div className="flex justify-center">
-              <motion.div
-                key={`next-${activeIndex}`}
-                initial={{ opacity: 0, x: 100, scale: 0.8 }}
-                animate={{ opacity: 0.6, x: 0, scale: 0.8 }}
-                transition={{ duration: 0.8, ease: "easeInOut" }}
-                className="w-[250px] h-[350px] rounded-lg overflow-hidden shadow-lg cursor-pointer"
-                onClick={() => setActiveIndex((prev) => (prev + 1) % images.length)}
-              >
-                <img
-                  src={nextImage.src}
-                  alt={nextImage.alt}
-                  className="w-full h-full object-cover filter blur-sm hover:blur-none transition-all duration-300"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-black/20"></div>
-              </motion.div>
-            </div>
           </div>
           
           {/* Navigation Controls */}
