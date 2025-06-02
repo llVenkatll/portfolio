@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 const Gallery = () => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -68,15 +68,6 @@ const Gallery = () => {
     }
   ]
 
-  // Auto-scroll effect - 7 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % images.length)
-    }, 7000) // Change image every 7 seconds
-
-    return () => clearInterval(interval)
-  }, [images.length])
-
   const currentImage = images[activeIndex]
   const prevImage = images[(activeIndex - 1 + images.length) % images.length]
   const nextImage = images[(activeIndex + 1) % images.length]
@@ -93,11 +84,11 @@ const Gallery = () => {
         
         {/* Gallery Display */}
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-3 gap-8 items-center">
             
-            {/* Images Container */}
+            {/* Images Container - Left Side */}
             <div className="relative">
-              <div className="flex items-center justify-center relative h-[500px] overflow-hidden">
+              <div className="flex items-center justify-center relative h-[500px]">
                 
                 {/* Previous Image (Left, Blurred) */}
                 <motion.div
@@ -105,7 +96,7 @@ const Gallery = () => {
                   initial={{ opacity: 0, x: -100, scale: 0.8 }}
                   animate={{ opacity: 0.4, x: -80, scale: 0.7 }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
-                  className="absolute left-0 w-[200px] h-[300px] rounded-lg overflow-hidden shadow-lg z-10 cursor-pointer"
+                  className="absolute left-0 w-[180px] h-[280px] rounded-lg overflow-hidden shadow-lg z-10 cursor-pointer"
                   onClick={() => setActiveIndex((prev) => (prev - 1 + images.length) % images.length)}
                 >
                   <img
@@ -116,42 +107,25 @@ const Gallery = () => {
                   />
                 </motion.div>
 
-                {/* Current Image (Center, Sharp) */}
+                {/* Current Image (Center, Sharp, Full Display) */}
                 <motion.div
                   key={`current-${activeIndex}`}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
-                  className="relative z-20 w-[350px] h-[450px] rounded-lg overflow-hidden shadow-2xl"
+                  className="relative z-20 w-[400px] h-[500px] rounded-lg overflow-hidden shadow-2xl"
                 >
                   <img
                     src={currentImage.src}
                     alt={currentImage.alt}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </motion.div>
-
-                {/* Next Image (Right, Blurred) */}
-                <motion.div
-                  key={`next-${activeIndex}`}
-                  initial={{ opacity: 0, x: 100, scale: 0.8 }}
-                  animate={{ opacity: 0.4, x: 80, scale: 0.7 }}
-                  transition={{ duration: 0.8, ease: "easeInOut" }}
-                  className="absolute right-0 w-[200px] h-[300px] rounded-lg overflow-hidden shadow-lg z-10 cursor-pointer"
-                  onClick={() => setActiveIndex((prev) => (prev + 1) % images.length)}
-                >
-                  <img
-                    src={nextImage.src}
-                    alt={nextImage.alt}
-                    className="w-full h-full object-cover filter blur-sm"
+                    className="w-full h-full object-contain bg-secondary-theme/10"
                     loading="lazy"
                   />
                 </motion.div>
               </div>
             </div>
 
-            {/* Text Content */}
+            {/* Text Content - Center */}
             <motion.div
               key={`text-${activeIndex}`}
               initial={{ opacity: 0, x: 50 }}
@@ -198,6 +172,26 @@ const Gallery = () => {
                 />
               </div>
             </motion.div>
+
+            {/* Next Image - Right Side */}
+            <div className="flex justify-center">
+              <motion.div
+                key={`next-${activeIndex}`}
+                initial={{ opacity: 0, x: 100, scale: 0.8 }}
+                animate={{ opacity: 0.6, x: 0, scale: 0.8 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+                className="w-[250px] h-[350px] rounded-lg overflow-hidden shadow-lg cursor-pointer"
+                onClick={() => setActiveIndex((prev) => (prev + 1) % images.length)}
+              >
+                <img
+                  src={nextImage.src}
+                  alt={nextImage.alt}
+                  className="w-full h-full object-cover filter blur-sm hover:blur-none transition-all duration-300"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/20"></div>
+              </motion.div>
+            </div>
           </div>
           
           {/* Navigation Controls */}
@@ -205,7 +199,7 @@ const Gallery = () => {
             
             {/* Previous Button */}
             <motion.button
-              className="bg-secondary-theme/90 hover:bg-secondary-theme text-primary-theme p-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              className="bg-secondary-theme/90 hover:bg-secondary-theme text-primary-theme p-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
               onClick={() => setActiveIndex((prev) => (prev - 1 + images.length) % images.length)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -234,7 +228,7 @@ const Gallery = () => {
 
             {/* Next Button */}
             <motion.button
-              className="bg-secondary-theme/90 hover:bg-secondary-theme text-primary-theme p-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              className="bg-secondary-theme/90 hover:bg-secondary-theme text-primary-theme p-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
               onClick={() => setActiveIndex((prev) => (prev + 1) % images.length)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
