@@ -28,7 +28,7 @@ const Gallery = () => {
       src: "/images/1 (4).jpg",
       alt: "Venkatesh - Award Ceremony 1",
       title: "eXlog – Math in Motion",
-      description: "The Math Club squad that made "eXlog" a fun equation of logic and laughter."
+      description: "The Math Club squad that made 'eXlog' a fun equation of logic and laughter."
     },
     {
       src: "/images/5th.jpg",
