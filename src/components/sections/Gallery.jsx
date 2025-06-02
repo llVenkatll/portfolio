@@ -70,24 +70,26 @@ const Gallery = () => {
 
   const currentImage = images[activeIndex]
   const prevImage = images[(activeIndex - 1 + images.length) % images.length]
-  const nextImage = images[(activeIndex + 1) % images.length]
 
   return (
-    <section id="gallery" className="pt-10">
+    <section id="gallery" className="pt-10 relative z-0">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-
+        {/* Section Title - High z-index to stay above images */}
+        <div className="relative z-50 mb-12">
+          <h2 className="section-title">Gallery</h2>
+        </div>
         
         {/* Gallery Display */}
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             
             {/* Images Container - Left Side */}
-            <div className="relative">
+            <div className="relative z-20">
               <div className="flex items-center justify-center relative h-[500px]">
                 
                 {/* Previous Image (Left, Blurred) */}
@@ -96,7 +98,7 @@ const Gallery = () => {
                   initial={{ opacity: 0, x: -100, scale: 0.8 }}
                   animate={{ opacity: 0.4, x: -80, scale: 0.7 }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
-                  className="absolute left-0 w-[180px] h-[280px] rounded-lg overflow-hidden shadow-lg z-10 cursor-pointer"
+                  className="absolute left-0 w-[180px] h-[280px] rounded-lg overflow-hidden shadow-lg z-30 cursor-pointer"
                   onClick={() => setActiveIndex((prev) => (prev - 1 + images.length) % images.length)}
                 >
                   <img
@@ -113,7 +115,7 @@ const Gallery = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, ease: "easeInOut" }}
-                  className="relative z-20 w-[400px] h-[500px] rounded-lg overflow-hidden shadow-2xl"
+                  className="relative z-40 w-[400px] h-[500px] rounded-lg overflow-hidden shadow-2xl"
                 >
                   <img
                     src={currentImage.src}
@@ -131,7 +133,7 @@ const Gallery = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
-              className="space-y-6"
+              className="space-y-6 relative z-30"
             >
               <div>
                 <motion.h3 
@@ -175,7 +177,7 @@ const Gallery = () => {
           </div>
           
           {/* Navigation Controls */}
-          <div className="flex justify-center items-center gap-8 mt-16">
+          <div className="flex justify-center items-center gap-8 mt-16 relative z-30">
             
             {/* Previous Button */}
             <motion.button
