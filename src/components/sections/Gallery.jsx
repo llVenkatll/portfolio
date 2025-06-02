@@ -84,7 +84,7 @@ const Gallery = () => {
         
         {/* Gallery Display */}
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="grid lg:grid-cols-3 gap-8 items-center">
             
             {/* Images Container - Left Side */}
             <div className="relative">
@@ -125,16 +125,72 @@ const Gallery = () => {
               </div>
             </div>
 
-            {/* Gallery Title - Center */}
-            <div className="flex flex-col justify-center items-center">
-              <motion.h2 
-                className="text-5xl font-bold text-primary-theme text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+            {/* Text Content - Center */}
+            <motion.div
+              key={`text-${activeIndex}`}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeInOut", delay: 0.2 }}
+              className="space-y-6"
+            >
+              <div>
+                <motion.h3 
+                  className="text-4xl font-bold text-primary-theme mb-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  {currentImage.title}
+                </motion.h3>
+                <motion.p 
+                  className="text-lg text-gray-600 leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                >
+                  {currentImage.description}
+                </motion.p>
+              </div>
+
+              {/* Image Counter */}
+              <motion.div 
+                className="text-sm text-gray-500 font-medium"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
               >
-                Gallery
-              </motion.h2>
+                {activeIndex + 1} of {images.length}
+              </motion.div>
+
+              {/* Progress Bar */}
+              <div className="w-full bg-gray-200 rounded-full h-1">
+                <motion.div
+                  className="bg-accent-theme h-1 rounded-full"
+                  initial={{ width: "0%" }}
+                  animate={{ width: `${((activeIndex + 1) / images.length) * 100}%` }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
+                />
+              </div>
+            </motion.div>
+
+            {/* Next Image - Right Side */}
+            <div className="flex justify-center">
+              <motion.div
+                key={`next-${activeIndex}`}
+                initial={{ opacity: 0, x: 100, scale: 0.8 }}
+                animate={{ opacity: 0.6, x: 0, scale: 0.8 }}
+                transition={{ duration: 0.8, ease: "easeInOut" }}
+                className="w-[250px] h-[350px] rounded-lg overflow-hidden shadow-lg cursor-pointer"
+                onClick={() => setActiveIndex((prev) => (prev + 1) % images.length)}
+              >
+                <img
+                  src={nextImage.src}
+                  alt={nextImage.alt}
+                  className="w-full h-full object-cover filter blur-sm hover:blur-none transition-all duration-300"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/20"></div>
+              </motion.div>
             </div>
           </div>
           
