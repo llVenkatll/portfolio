@@ -31,7 +31,7 @@ const Gallery = () => {
       description: "Receiving recognition for outstanding contributions to research and academic excellence."
     },
     {
-      src: "/images/1 (5).jpg",
+      src: "/images/5th.jpg",
       alt: "Venkatesh - Tennis Tournament",
       title: "Tennis Championship",
       description: "Competing in tennis tournaments and maintaining an active sports lifestyle alongside academics."
@@ -43,13 +43,13 @@ const Gallery = () => {
       description: "Celebrating graduation and academic milestones with family and friends."
     },
     {
-      src: "/images/1 (7).jpg",
+      src: "/images/7th.jpg",
       alt: "Venkatesh - Hackathon",
       title: "Smart India Hackathon",
       description: "Participating in the Smart India Hackathon, developing innovative solutions for national challenges."
     },
     {
-      src: "/images/1 (8).jpg",
+      src: "/images/8th.jpg",
       alt: "Venkatesh - Professional Event 2",
       title: "IEEE Leadership",
       description: "Taking leadership roles in IEEE student chapter and organizing technical events."
