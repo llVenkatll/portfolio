@@ -4,7 +4,7 @@ import { useState } from 'react'
 const Gallery = () => {
   const [activeIndex, setActiveIndex] = useState(0)
   
-    // Your actual images with proper names
+  // Your actual images with proper names
   const images = [
     {
       src: "/images/1 (1).jpg",
@@ -28,13 +28,13 @@ const Gallery = () => {
       src: "/images/1 (4).jpg",
       alt: "Venkatesh - Award Ceremony 1",
       title: "eXlog – Math in Motion",
-      description: "The Math Club squad that made "eXlog" a fun equation of logic and laughter.."
+      description: "The Math Club squad that made "eXlog" a fun equation of logic and laughter."
     },
     {
       src: "/images/5th.jpg",
       alt: "Venkatesh - Tennis Tournament",
       title: "Global Connect: From Peru to SSN",
-      description: "Welcoming our exchange student from Peru for an ICASSP 2025 internship.Cultures, ideas, and smiles exchanged—english wasn’t the only common language!"
+      description: "Welcoming our exchange student from Peru for an ICASSP 2025 internship. Cultures, ideas, and smiles exchanged—English wasn't the only common language!"
     },
     {
       src: "/images/1 (6).jpg",
@@ -46,7 +46,7 @@ const Gallery = () => {
       src: "/images/7th.jpg",
       alt: "Venkatesh - Hackathon",
       title: "Outing at Science City",
-      description: "Smiles, steps, and science – team outings don’t get better than this. Candid laughter outside Chennai’s iconic dome of curiosity! ."
+      description: "Smiles, steps, and science – team outings don't get better than this. Candid laughter outside Chennai's iconic dome of curiosity!"
     },
     {
       src: "/images/8th.jpg",
@@ -58,7 +58,7 @@ const Gallery = () => {
       src: "/images/1 (9).jpg",
       alt: "Venkatesh - Lab Work 2",
       title: "Dinner & Dialogues at Novotel",
-      description: "Wrapped up the SPS talk by Dr. Ken Sugeyama with good food and great minds.From high-impact journals to high-impact buffet—what a night!"
+      description: "Wrapped up the SPS talk by Dr. Ken Sugeyama with good food and great minds. From high-impact journals to high-impact buffet—what a night!"
     },
     {
       src: "/images/1 (10).jpg",
