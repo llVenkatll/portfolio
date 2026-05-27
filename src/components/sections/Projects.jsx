@@ -5,60 +5,53 @@ import { TbEye, TbBrain, TbDeviceHeartMonitor, TbEar, TbTemperature } from 'reac
 const Projects = () => {
   const projects = [
     {
-      title: "Gaze Mapping Based Attention Monitoring",
-      date: "Aug 2024 - Apr 2025",
-      description: "Pioneered a groundbreaking gaze tracking system that maps visual attention patterns during cognitive tasks, enabling real-time monitoring of focus levels and attention span, leading to improved assessment accuracy for attention-related disorders and enhanced learning environment adaptations.",
-      skills: ["Full Stack Development", "Firebase", "Machine Learning", "Human-Computer Interface"],
-      icon: <TbEye className="text-accent-theme text-3xl" />,
-      github: "https://github.com/llVenkatll/GazeMapping"
+      title: "Long-Input Clinical Speech Inference Pipeline",
+      date: "CMU, Spring 2026",
+      description: "Designed a clinical note generation system for SOAP notes from 30-minute doctor-patient audio using Whisper-based ASR and chunked LLM inference. Achieved about 2.1x throughput improvement and about 37% GPU memory reduction via INT8 quantization over an fp16 chunked baseline on T4 GPU.",
+      skills: ["PyTorch", "Mistral-7B", "Whisper", "INT8 Quantization", "vLLM", "ROUGE-L / BERTScore"],
+      icon: <TbBrain className="text-accent-theme text-3xl" />
     },
     {
-      title: "Eye Fundus Image-Based Chronic Disease Prediction",
-      date: "Jul 2023 - Jan 2025",
-      description: "Developed an advanced retinal analysis system using fundus imagery that accurately predicts the progression of chronic diseases like diabetes and hypertension, achieving 95% sensitivity in early detection and enabling preventive interventions months before traditional diagnostic methods.",
-      skills: ["Image Segmentation", "Machine Learning", "UI UX", "Medical Image Processing"],
-      icon: <TbEye className="text-accent-theme text-3xl" />,
-      github: "https://github.com/VenkatM300/fundus-disease-prediction"
+      title: "Adversarially Robust & Fair Postoperative Complication Prediction",
+      date: "CMU, Spring 2026",
+      description: "Built a 4-pillar secure ML pipeline over a synthetic TKA dataset covering adversarial robustness, fairness, differential privacy, and API hardening. The project used FGSM/PGD adversarial training, equalized-odds threshold post-processing, and DP-SGD.",
+      skills: ["PyTorch", "Scikit-learn", "Opacus", "Fairlearn", "PGD/FGSM", "API Hardening"],
+      icon: <TbDeviceHeartMonitor className="text-accent-theme text-3xl" />
     },
     {
-      title: "Multi-Modal VR-Based System for Home Glaucoma Monitoring",
-      date: "Jul 2024 - Oct 2024",
-      description: "Designed an at-home diagnostic platform combining interactive headset technology with non-invasive sensors that captured temperature variations, sound-based indicators, and field-of-vision data, enabling constant health tracking while achieving diagnostic accuracy comparable to specialized clinics.",
-      skills: ["Data Processing", "Thermal Imaging", "Unity VR", "Embedded Systems", "Acoustics"],
-      icon: <TbTemperature className="text-accent-theme text-3xl" />,
-      github: "https://github.com/VenkatM300/vr-glaucoma-monitoring"
+      title: "Medical Image Segmentation with MONAI",
+      date: "CMU, Spring 2026",
+      description: "Developed 3D medical image segmentation workflows using MONAI transforms, DataLoader, and model zoo components including U-Net and SegResNet for volumetric clinical imaging tasks with standardized preprocessing pipelines.",
+      skills: ["MONAI", "PyTorch", "3D U-Net", "SegResNet", "Dice Loss", "NIfTI/DICOM"],
+      icon: <TbEye className="text-accent-theme text-3xl" />
     },
     {
-      title: "Tinnitus Diagnosis and Adaptive Sound Therapy",
-      date: "Sep 2023 - Mar 2024",
-      description: "Developed an innovative system for tinnitus diagnosis and personalized sound therapy using advanced acoustic signal processing and machine learning algorithms. The system achieved an 87% accuracy in diagnosing tinnitus severity and provided adaptive sound therapy.",
-      skills: ["Flutter", "BioSignal Processing", "Data Analytics", "Pattern Recognition"],
-      icon: <TbEar className="text-accent-theme text-3xl" />,
-      github: "https://github.com/VenkatM300/tinnitus-therapy"
+      title: "EEG-Based Schizophrenia Detection using AI",
+      date: "ATSN-2024, Kuwait",
+      description: "Pioneered an EEG analysis pipeline achieving 99% accuracy in early detection of schizophrenia through transformer-based attention networks for brain wave pattern analysis.",
+      skills: ["PyTorch", "Transformers", "Attention Networks", "Feature Extraction", "Data Preprocessing"],
+      icon: <TbBrain className="text-accent-theme text-3xl" />
     },
     {
-      title: "Thermal And Optical Camera based Life Detection System",
-      date: "Sep 2023 - Mar 2024",
-      description: "Architected and deployed a dual-modality biometric surveillance system leveraging thermal-optical sensor fusion and deep convolutional neural networks on Google Cloud Platform, integrating MLflow for model versioning and MongoDB for scalable medical diagnostics processing.",
-      skills: ["Deep Learning", "Computer Vision", "MLflow", "MongoDB", "Medical Image Processing"],
-      icon: <TbTemperature className="text-accent-theme text-3xl" />,
-      github: "https://github.com/VenkatM300/thermal-optical-detection"
+      title: "Gaze-Based Attention Monitoring System",
+      date: "Conference Presentation",
+      description: "Pioneered a webcam-based gaze tracking system using WebGazer.js for real-time monitoring of focus levels and attention patterns during cognitive tasks with a cost-effective hardware-free solution.",
+      skills: ["WebGazer.js", "Firebase", "React", "Machine Learning", "Human-Computer Interface"],
+      icon: <TbEye className="text-accent-theme text-3xl" />
+    },
+    {
+      title: "Thermal-Optical Life Detection System",
+      date: "Dual-Modality Biometric Surveillance on GCP",
+      description: "Architected a sensor fusion system with deep CNNs leveraging thermal-optical imaging, integrated MLflow for model versioning and MongoDB for scalable diagnostics processing, and deployed it on Google Cloud Platform for real-time analysis.",
+      skills: ["Deep Learning", "Computer Vision", "MLflow", "MongoDB", "Google Cloud Platform", "PyTorch"],
+      icon: <TbTemperature className="text-accent-theme text-3xl" />
     },
     {
       title: "AI-Powered COVID-19 Detection in Lung CT Scans",
-      date: "Sep 2023 - Mar 2024",
-      description: "Created an advanced image processing and segmentation system to detect COVID-affected regions in lung CT scans using adaptive thresholding and morphological operations.",
+      date: "Medical Image Processing",
+      description: "Created an advanced segmentation system for COVID-affected regions using adaptive thresholding, morphological operations, edge detection algorithms, and adaptive histogram equalization.",
       skills: ["MATLAB", "Image Processing", "Adaptive Histogram Equalization", "Morphological Operations"],
-      icon: <TbDeviceHeartMonitor className="text-accent-theme text-3xl" />,
-      github: "https://github.com/llVenkatll/AI-Powered-COVID-19-Detection-in-Lung-CT-Scans-"
-    },
-    {
-      title: "AI for Early Detection of Schizophrenia",
-      date: "Jul 2024 - Oct 2024",
-      description: "Engineered a pioneering EEG analysis pipeline that detects early neurological markers of schizophrenia, achieving 99% accuracy in identifying at-risk patients through brain wave pattern analysis, enabling crucial early interventions and personalized treatment planning.",
-      skills: ["Transformers", "Attention Networks", "Machine Learning", "Feature Extraction"],
-      icon: <TbBrain className="text-accent-theme text-3xl" />,
-      github: "https://github.com/llVenkatll/Classification-of-Schizophrenia-for-Early-Diagnosis"
+      icon: <TbDeviceHeartMonitor className="text-accent-theme text-3xl" />
     }
   ]
 
@@ -103,15 +96,17 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-4 mt-2">
-                  <a 
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-secondary-theme hover:text-accent-theme transition-colors duration-300 flex items-center gap-1 text-sm"
-                  >
-                    <FaGithub /> 
-                    <span>View Code</span>
-                  </a>
+                  {project.github && (
+                    <a 
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-secondary-theme hover:text-accent-theme transition-colors duration-300 flex items-center gap-1 text-sm"
+                    >
+                      <FaGithub /> 
+                      <span>View Code</span>
+                    </a>
+                  )}
                   {project.demo && (
                     <a 
                       href={project.demo}

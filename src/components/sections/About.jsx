@@ -19,30 +19,27 @@ const About = () => {
           <div className="lg:col-span-2 space-y-6">
             <div className="space-y-4">
               <p className="text-secondary-theme text-lg leading-relaxed">
-                I am a highly motivated Biomedical Engineering student driven by a passion for using cutting-edge 
-                technology to revolutionize healthcare. My journey in this field started with a fascination for how 
-                technology can improve human lives, particularly in healthcare, leading me to pursue an 
-                <span className="text-accent-theme font-semibold"> MS in Artificial Engineering at Carnegie Mellon University</span>.
+                I am pursuing a <span className="text-accent-theme font-semibold">Master of Science in Artificial Engineering - Biomedical Engineering at Carnegie Mellon University</span>,
+                with a resume-backed focus on AI safety, medical image segmentation, biosignal processing,
+                transformer architectures, large language models, RAG, distributed computing, and few-shot learning.
               </p>
               
               <p className="text-secondary-theme">
-                With extensive experience in machine learning, deep learning, and data analytics, I specialize in developing 
-                predictive models, medical image analysis systems, and natural language processing applications. My work spans 
-                <span className="text-accent-theme font-semibold"> biomedical data analysis, medical imaging, biostatistics, medical informatics, and computational modeling</span>.
+                My project work includes clinical speech inference for SOAP note generation, adversarially robust and
+                fair postoperative complication prediction, 3D medical image segmentation with MONAI, gaze-based
+                attention monitoring, and thermal-optical life detection.
               </p>
               
               <p className="text-secondary-theme">
-                As a full stack developer, I leverage modern web technologies including React, Next.js, Node.js, 
-                MongoDB, Tailwind CSS, and ShadCN to create scalable healthcare applications. My expertise extends 
-                to cloud platforms like AWS and Firebase, enabling me to design comprehensive, end-to-end solutions 
-                that bridge the gap between cutting-edge research and practical healthcare applications.
+                My technical stack includes PyTorch, TensorFlow, Transformers, LangChain, MONAI, OpenAI API, RAG,
+                React, Node.js, Flutter, Django, SwiftUI, Firebase, AWS, Apache Spark, Kafka, SQL/NoSQL, MLflow,
+                TensorBoard, W&B, CUDA, vLLM, INT8 quantization, and KV-cache optimization.
               </p>
               
               <p className="text-secondary-theme">
-                Through my research and professional experience, I've developed innovative solutions that bridge 
-                theoretical knowledge with practical healthcare applications. I'm committed to harnessing technology 
-                to improve patient care, reduce costs, and create more efficient healthcare solutions that can make 
-                a meaningful impact on global health outcomes.
+                My professional experience spans prosthetic simulator research at TU Delft University, ophthalmic
+                biomarker and vessel segmentation work at Prediscan Medtech, HTIC, IIT Madras, and biomedical
+                engineering work at Awali Hospital.
               </p>
             </div>
 
@@ -57,28 +54,28 @@ const About = () => {
                   <TbEye className="text-accent-theme text-2xl mt-1" />
                   <div>
                     <h4 className="font-semibold text-sm text-primary-theme">Medical Image Analysis</h4>
-                    <p className="text-secondary-theme text-xs">Retinal analysis, fundus imaging, optic disc segmentation</p>
+                    <p className="text-secondary-theme text-xs">MONAI workflows, 3D U-Net, SegResNet, NIfTI/DICOM processing</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <TbHeartRateMonitor className="text-accent-theme text-2xl mt-1" />
                   <div>
                     <h4 className="font-semibold text-sm text-primary-theme">Biomedical Signal Processing</h4>
-                    <p className="text-secondary-theme text-xs">EEG analysis, attention monitoring, prosthetic control</p>
+                    <p className="text-secondary-theme text-xs">EEG analysis, gaze monitoring, prosthetic simulation responsiveness</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <SiUnity className="text-accent-theme text-2xl mt-1" />
                   <div>
-                    <h4 className="font-semibold text-sm text-primary-theme">VR/AR Healthcare</h4>
-                    <p className="text-secondary-theme text-xs">Home monitoring systems, diagnostic platforms</p>
+                    <h4 className="font-semibold text-sm text-primary-theme">LLM Systems</h4>
+                    <p className="text-secondary-theme text-xs">Whisper ASR, Mistral-7B, vLLM, INT8 quantization</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <TbMicroscope className="text-accent-theme text-2xl mt-1" />
                   <div>
                     <h4 className="font-semibold text-sm text-primary-theme">AI in Healthcare</h4>
-                    <p className="text-secondary-theme text-xs">Predictive modeling, disease progression tracking</p>
+                    <p className="text-secondary-theme text-xs">Adversarial robustness, fairness, differential privacy, API hardening</p>
                   </div>
                 </div>
               </div>
@@ -103,11 +100,11 @@ const About = () => {
                   </div>
                   <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
                     <FaLaptopCode className="text-accent-theme text-xl" />
-                    <span className="text-sm font-medium text-primary-theme">Kotlin</span>
+                    <span className="text-sm font-medium text-primary-theme">CUDA</span>
                   </div>
                   <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
                     <FaDatabase className="text-accent-theme text-xl" />
-                    <span className="text-sm font-medium text-primary-theme">R</span>
+                    <span className="text-sm font-medium text-primary-theme">MATLAB</span>
                   </div>
                 </div>
               </div>
@@ -118,19 +115,19 @@ const About = () => {
                 <div className="space-y-2">
                   <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
                     <FaReact className="text-accent-theme text-xl" />
-                    <span className="text-sm font-medium text-primary-theme">React & Next.js</span>
+                    <span className="text-sm font-medium text-primary-theme">React & Node.js</span>
                   </div>
                   <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
                     <FaNodeJs className="text-accent-theme text-xl" />
-                    <span className="text-sm font-medium text-primary-theme">Node.js & Express</span>
+                    <span className="text-sm font-medium text-primary-theme">Flutter & Django</span>
                   </div>
                   <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
                     <SiMongodb className="text-accent-theme text-xl" />
-                    <span className="text-sm font-medium text-primary-theme">MongoDB & SQL</span>
+                    <span className="text-sm font-medium text-primary-theme">SwiftUI & Firebase</span>
                   </div>
                   <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
                     <SiTailwindcss className="text-accent-theme text-xl" />
-                    <span className="text-sm font-medium text-primary-theme">Tailwind & ShadCN</span>
+                    <span className="text-sm font-medium text-primary-theme">AWS</span>
                   </div>
                 </div>
               </div>
@@ -141,11 +138,11 @@ const About = () => {
                 <div className="space-y-2">
                   <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
                     <SiTensorflow className="text-accent-theme text-xl" />
-                    <span className="text-sm font-medium text-primary-theme">TensorFlow</span>
+                    <span className="text-sm font-medium text-primary-theme">TensorFlow & MONAI</span>
                   </div>
                   <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
                     <SiPytorch className="text-accent-theme text-xl" />
-                    <span className="text-sm font-medium text-primary-theme">PyTorch</span>
+                    <span className="text-sm font-medium text-primary-theme">PyTorch & Transformers</span>
                   </div>
                 </div>
               </div>
@@ -156,11 +153,11 @@ const About = () => {
                 <div className="space-y-2">
                   <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
                     <SiAmazonwebservices className="text-accent-theme text-xl" />
-                    <span className="text-sm font-medium text-primary-theme">AWS & Firebase</span>
+                    <span className="text-sm font-medium text-primary-theme">vLLM & RAG</span>
                   </div>
                   <div className="bg-secondary-theme rounded-lg p-3 flex items-center space-x-2">
                     <FaLaptopCode className="text-accent-theme text-xl" />
-                    <span className="text-sm font-medium text-primary-theme">Flutter & Unity</span>
+                    <span className="text-sm font-medium text-primary-theme">MLflow & W&B</span>
                   </div>
                 </div>
               </div>

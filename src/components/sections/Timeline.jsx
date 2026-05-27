@@ -4,38 +4,38 @@ import { FaSignal } from 'react-icons/fa'
 const Timeline = () => {
   const timelineEvents = [
     {
-      title: "Chair",
-      organization: "IEEE Signal Processing Society",
-      period: "2023 - 2025",
-      description: "Led initiatives, workshops, and events to foster student engagement and technical growth in signal processing.",
+      title: "Financial Advisor",
+      organization: "Joint Funding Commission, Carnegie Mellon University",
+      period: "Carnegie Mellon University",
+      description: "Leadership and responsibility listed in the provided resume.",
       icon: <FaSignal />
     },
     {
       title: "President",
-      organization: "Math Club",
-      period: "2022 - 2023",
-      description: "Organized competitions, seminars, and activities to promote mathematical thinking and problem-solving among peers.",
+      organization: "Indian Graduate Student Association (IGSA), Carnegie Mellon University",
+      period: "Carnegie Mellon University",
+      description: "Leadership and responsibility listed in the provided resume.",
       icon: <FaSignal />
     },
     {
-      title: "Secretary",
-      organization: "IEEE SSN Student Branch",
-      period: "2022 - 2023",
-      description: "Coordinated chapter activities, managed communications, and ensured successful execution of technical and professional events.",
+      title: "Treasurer",
+      organization: "Graduate Biomedical Engineering Society (GBMES), Carnegie Mellon University",
+      period: "Carnegie Mellon University",
+      description: "Leadership and responsibility listed in the provided resume.",
       icon: <FaSignal />
     },
     {
-      title: "Joint Secretary",
-      organization: "IEEE Engineering in Medicine and Biology Society",
-      period: "2022 - 2023",
-      description: "Contributed to events and projects at the intersection of engineering and healthcare.",
+      title: "Chair",
+      organization: "IEEE Signal Processing Society, SSN College of Engineering",
+      period: "SSN College of Engineering",
+      description: "Leadership and responsibility listed in the provided resume.",
       icon: <FaSignal />
     },
     {
-      title: "Head of Registrations",
-      organization: "INSTINCTS'24, SSN's flagship cultural festival",
-      period: "2024",
-      description: "Efficiently managed participant onboarding and ensuring smooth event operations.",
+      title: "President",
+      organization: "Math Club, SSN College of Engineering",
+      period: "SSN College of Engineering",
+      description: "Leadership and responsibility listed in the provided resume.",
       icon: <FaSignal />
     }
   ]
@@ -48,7 +48,7 @@ const Timeline = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="section-title">IEEE Journey & Leadership</h2>
+        <h2 className="section-title">Leadership & Responsibilities</h2>
         
         <div className="relative">
           {/* Timeline line */}
