@@ -34,7 +34,7 @@ const Extras = () => {
               transition={{ duration: 0.3 }}
             >
               <div className="flex items-start justify-center h-12 w-12 bg-primary-theme/20 rounded-lg shrink-0">
-                {award.icon}
+                {publication.icon}
               </div>
               
               <div>
