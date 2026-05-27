@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+# Venkatesh Meenakshinathan Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Resume-backed portfolio website for Venkatesh Meenakshinathan, focused on AI, biomedical engineering, medical imaging, biosignal processing, LLM systems, and healthcare technology.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Icons
 
-## Expanding the ESLint configuration
+## Content Scope
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The site content is sourced from `Venkatesh_Resume.pdf` and `Venkatesh_Resume .pdf` and highlights:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- AI/ML, medical image segmentation, biosignal processing, transformer architectures, LLMs, RAG, LLM infrastructure, and AI safety focus areas
+- Selected research projects in clinical speech inference, adversarially robust and fair complication prediction, MONAI medical image segmentation, schizophrenia detection, glaucoma monitoring, gaze-based attention monitoring, COVID-19 CT segmentation, and thermal-optical life detection
+- Research publications and conference presentation entries listed in the resume
+- Professional experience at TU Delft University, Prediscan Medtech, HTIC, IIT Madras, and Awali Hospital
+- Education and leadership responsibilities listed in the resume
+
+MRI reconstruction and physics-informed learning project details are not displayed because they were not present in the provided resumes.
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Start the development server:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm run dev
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Build for production:
+
+```bash
+npm run build
+```
+
+Run lint checks:
+
+```bash
+npm run lint
 ```
