@@ -12,15 +12,15 @@ Resume-backed portfolio website for Venkatesh Meenakshinathan, focused on AI, bi
 
 ## Content Scope
 
-The site content is sourced from `Venkatesh_Resume.pdf` and highlights:
+The site content is sourced from `Venkatesh_Resume.pdf` and `Venkatesh_Resume .pdf` and highlights:
 
-- AI/ML, medical image segmentation, biosignal processing, transformer architectures, LLMs, RAG, and AI safety focus areas
-- Selected research projects in schizophrenia detection, glaucoma monitoring, gaze-based attention monitoring, COVID-19 CT segmentation, and thermal-optical life detection
+- AI/ML, medical image segmentation, biosignal processing, transformer architectures, LLMs, RAG, LLM infrastructure, and AI safety focus areas
+- Selected research projects in clinical speech inference, adversarially robust and fair complication prediction, MONAI medical image segmentation, schizophrenia detection, glaucoma monitoring, gaze-based attention monitoring, COVID-19 CT segmentation, and thermal-optical life detection
 - Research publications and conference presentation entries listed in the resume
 - Professional experience at TU Delft University, Prediscan Medtech, HTIC, IIT Madras, and Awali Hospital
 - Education and leadership responsibilities listed in the resume
 
-MRI reconstruction and physics-informed learning project details are not displayed because they were not present in the provided resume.
+MRI reconstruction and physics-informed learning project details are not displayed because they were not present in the provided resumes.
 
 ## Development
 

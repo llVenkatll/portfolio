@@ -79,7 +79,7 @@ const focusAreas = [
 const skillGroups = [
   {
     title: 'AI/ML',
-    items: ['PyTorch', 'TensorFlow', 'Transformers', 'LangChain', 'OpenAI API', 'RAG'],
+    items: ['PyTorch', 'TensorFlow', 'Transformers', 'LangChain', 'MONAI', 'OpenAI API', 'RAG'],
     icon: <SiPytorch />,
   },
   {
@@ -93,6 +93,11 @@ const skillGroups = [
     icon: <FaDatabase />,
   },
   {
+    title: 'LLM Infrastructure',
+    items: ['CUDA', 'vLLM', 'INT8 Quantization', 'KV-Cache Optimization'],
+    icon: <TbDeviceAnalytics />,
+  },
+  {
     title: 'Medical Engineering',
     items: ['MATLAB', 'Medical Imaging', 'Signal Processing', 'LabVIEW', 'SIMULINK'],
     icon: <TbStethoscope />,
@@ -100,6 +105,33 @@ const skillGroups = [
 ]
 
 const projects: Project[] = [
+  {
+    title: 'Long-Input Clinical Speech Inference Pipeline',
+    context: 'CMU, Spring 2026',
+    description:
+      'Designed a clinical note generation system for SOAP notes from 30-minute doctor-patient audio using Whisper-based ASR and chunked LLM inference, targeting long-input and long-output bottlenecks in production healthcare AI.',
+    tech: ['PyTorch', 'Mistral-7B', 'Whisper', 'INT8 Quantization', 'vLLM', 'ROUGE-L / BERTScore Evaluation'],
+    icon: <TbDeviceAnalytics />,
+    emphasis: 'LLM systems for clinical documentation',
+  },
+  {
+    title: 'Adversarially Robust & Fair Postoperative Complication Prediction',
+    context: 'CMU, Spring 2026',
+    description:
+      'Built a 4-pillar secure ML pipeline over a synthetic TKA dataset covering adversarial robustness, fairness, differential privacy, and API hardening.',
+    tech: ['PyTorch', 'Scikit-learn', 'Opacus', 'Fairlearn', 'PGD/FGSM Adversarial Training', 'API Hardening'],
+    icon: <TbShieldCheck />,
+    emphasis: 'Secure and fair medical ML',
+  },
+  {
+    title: 'Medical Image Segmentation with MONAI',
+    context: 'CMU, Spring 2026',
+    description:
+      'Developed 3D medical image segmentation workflows using MONAI transforms, DataLoader, and model zoo components including U-Net and SegResNet for volumetric clinical imaging tasks.',
+    tech: ['MONAI', 'PyTorch', '3D U-Net', 'SegResNet', 'Dice Loss', 'NIfTI/DICOM Processing'],
+    icon: <TbScanEye />,
+    emphasis: '3D clinical image segmentation',
+  },
   {
     title: 'EEG-Based Schizophrenia Detection using AI',
     context: 'Conference Paper Published at ATSN-2024, Kuwait',
@@ -147,7 +179,7 @@ const projects: Project[] = [
   },
 ]
 
-// The resume does not provide MRI reconstruction or physics-informed learning project details yet.
+// The provided resumes do not include MRI reconstruction or physics-informed learning project details yet.
 // Keep those areas out of the visible portfolio until resume-backed facts are available.
 
 const publications = [
@@ -211,7 +243,7 @@ const credentials: Credential[] = [
 
 const leadership: Leadership[] = [
   { role: 'Financial Advisor, Joint Funding Commission', organization: 'Carnegie Mellon University' },
-  { role: 'Event Organizer, Indian Graduate Student Association (IGSA)', organization: 'Carnegie Mellon University' },
+  { role: 'President, Indian Graduate Student Association (IGSA)', organization: 'Carnegie Mellon University' },
   { role: 'Treasurer, Graduate Biomedical Engineering Society (GBMES)', organization: 'Carnegie Mellon University' },
   { role: 'Chair, IEEE Signal Processing Society', organization: 'SSN College of Engineering' },
   { role: 'President, Math Club', organization: 'SSN College of Engineering' },
