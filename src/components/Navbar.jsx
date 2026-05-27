@@ -35,8 +35,8 @@ const Navbar = () => {
           <li><a href="#experience" className="nav-link">Experience</a></li>
           <li><a href="#projects" className="nav-link">Projects</a></li>
           <li><a href="#gallery" className="nav-link">Gallery</a></li>
-          <li><a href="#timeline" className="nav-link">Professional Journey</a></li>
-          <li><a href="#extras" className="nav-link">Extras</a></li>
+          <li><a href="#timeline" className="nav-link">Leadership</a></li>
+          <li><a href="#extras" className="nav-link">Publications</a></li>
         </motion.ul>
 
         {/* Theme Toggle & Social Icons */}
@@ -65,7 +65,7 @@ const Navbar = () => {
             <FaGithub size={24} />
           </a>
           <a 
-            href="https://www.linkedin.com/in/venkateshmeenakshinathan/" 
+            href="https://www.linkedin.com/in/vnktmn/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-secondary-theme hover:text-accent-theme transition-colors duration-300"
@@ -117,10 +117,10 @@ const Navbar = () => {
               <a onClick={handleClick} href="#gallery" className="nav-link">Gallery</a>
             </li>
             <li className="py-2 text-xl">
-              <a onClick={handleClick} href="#timeline" className="nav-link">Professional Journey</a>
+              <a onClick={handleClick} href="#timeline" className="nav-link">Leadership</a>
             </li>
             <li className="py-2 text-xl">
-              <a onClick={handleClick} href="#extras" className="nav-link">Extras</a>
+              <a onClick={handleClick} href="#extras" className="nav-link">Publications</a>
             </li>
           </ul>
           
@@ -135,7 +135,7 @@ const Navbar = () => {
               <FaGithub size={30} />
             </a>
             <a 
-              href="https://www.linkedin.com/in/venkatesh-meenakshinathan-a60a88249/" 
+              href="https://www.linkedin.com/in/vnktmn/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-secondary-theme hover:text-accent-theme transition-colors duration-300"

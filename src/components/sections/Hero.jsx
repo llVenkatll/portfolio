@@ -15,12 +15,16 @@ const Hero = () => {
           Venkatesh Meenakshinathan.
         </h1>
         <div className="flex justify-center lg:justify-start items-center gap-4 sm:gap-6 md:gap-8 text-accent-theme font-medium text-lg sm:text-xl md:text-2xl">
-          <span>Innovator.</span>
+          <span>AI/ML.</span>
           <span className="text-secondary-theme">•</span>
-          <span>Builder.</span>
+          <span>Biomedical Engineering.</span>
           <span className="text-secondary-theme">•</span>
-          <span>Learner.</span>
+          <span>LLM Systems.</span>
         </div>
+        <p className="text-secondary-theme text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+          Biomedical engineering graduate student focused on medical image segmentation, biosignal processing,
+          transformer architectures, large language models, RAG, secure model training, and AI safety.
+        </p>
 
         <div className="pt-8">
           <a 

@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h2 className="text-accent-theme text-lg font-bold">Venkatesh Meenakshinathan</h2>
-            <p className="text-secondary-theme text-sm mt-1">Biomedical Engineer & AI Enthusiast</p>
+            <p className="text-secondary-theme text-sm mt-1">AI & Biomedical Engineering</p>
           </div>
           
           <div className="flex items-center gap-4">
@@ -21,7 +21,7 @@ const Footer = () => {
               <FaGithub size={24} />
             </a>
             <a 
-              href="https://www.linkedin.com/in/venkateshmeenakshinathan/" 
+              href="https://www.linkedin.com/in/vnktmn/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-secondary-theme hover:text-accent-theme transition-colors duration-300"

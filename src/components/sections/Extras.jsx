@@ -1,33 +1,17 @@
 import { motion } from 'framer-motion'
-import { FaMedal, FaTrophy, FaUsers } from 'react-icons/fa'
-import { GiTennisBall } from 'react-icons/gi'
+import { FaMedal } from 'react-icons/fa'
 
 const Extras = () => {
-  const awards = [
+  const publications = [
     {
-      title: "Smart India Hackathon 2023",
-      description: "Selected as one of the Top 5 teams nationally in the prestigious Smart India Hackathon 2023, recognized for developing an innovative solution to address a real-world problem in the government and industry sector.",
-      icon: <FaTrophy className="text-accent-theme text-3xl" />
-    },
-    {
-      title: "IEEE SPS Multimedia Signal Processing Cup",
-      description: "Achieved 3rd place in the highly competitive National Level IEEE SPS Multimedia Signal Processing Cup, showcasing excellence in multimedia signal processing through the development of a cutting-edge project.",
+      title: "Leveraging AI for Early Detection and Monitoring of Schizophrenia",
+      description: "International Conference & Forum on Assistive Technologies for Special Needs (ATSN-2024), Kuwait 2025.",
       icon: <FaMedal className="text-accent-theme text-3xl" />
     },
     {
-      title: "National Level Math Competition EXLOG",
-      description: "Emerged as the winner of the National Level Math Competition EXLOG, demonstrating exceptional analytical and problem-solving skills in a challenging mathematical environment.",
-      icon: <FaTrophy className="text-accent-theme text-3xl" />
-    },
-    {
-      title: "People's Choice Award on Innovation Day 2024",
-      description: "Honored with the People's Choice Award on Innovation Day 2024 at SSN College of Engineering for presenting a groundbreaking innovation that captured the interest and votes of both the audience and jury members.",
-      icon: <FaUsers className="text-accent-theme text-3xl" />
-    },
-    {
-      title: "Regional Level Tennis Championship",
-      description: "Proudly represented Abu Dhabi in the National Level Tennis Championship (Under-18 category), showcasing talent and sportsmanship at a high level of athletic competition.",
-      icon: <GiTennisBall className="text-accent-theme text-3xl" />
+      title: "Gaze-Based Attention Monitoring and Assessment System",
+      description: "Conference Presentation 2025.",
+      icon: <FaMedal className="text-accent-theme text-3xl" />
     }
   ]
 
@@ -39,10 +23,10 @@ const Extras = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h2 className="section-title">Awards & Extracurriculars</h2>
+        <h2 className="section-title">Research Publications & Presentations</h2>
         
         <div className="space-y-6">
-          {awards.map((award, index) => (
+          {publications.map((publication, index) => (
             <motion.div 
               key={index}
               className="bg-secondary-theme rounded-lg p-6 flex gap-4"
@@ -54,8 +38,8 @@ const Extras = () => {
               </div>
               
               <div>
-                <h3 className="text-lg font-bold mb-2 text-primary-theme">{award.title}</h3>
-                <p className="text-secondary-theme">{award.description}</p>
+                <h3 className="text-lg font-bold mb-2 text-primary-theme">{publication.title}</h3>
+                <p className="text-secondary-theme">{publication.description}</p>
               </div>
             </motion.div>
           ))}
